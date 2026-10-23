@@ -1,0 +1,11 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 78-kitchen-refined-pin-wood.png.
+Изменение: варочная поверхность немного увеличена, примерно на 20–25%, в существующей рабочей зоне справа от мойки.
+
+Use case: precise-object-edit.
+Make ONLY the existing black-glass induction COOKTOP slightly BIGGER in this supplied kitchen image. The user points to the cooking area at approximately x=64%, y=53.1%, just right of the sink and above the drawer cabinet.
+
+Increase the cooktop's visible width and front-to-back depth by about 20–25%, keeping its center in the same cooking area above the existing drawers. It should read as a plausible standard 60 cm four-zone induction hob set flush in the countertop. Its entire glass rectangle must remain within the real graphite worktop, with an appropriate front/back stone margin and a clear separation from the sink. Keep perspective correct. Make the four subtle cooking-zone circles and glass outline legible without bright graphics or text. Do not add gas burners, pots, a new oven, hood or kitchen island.
+
+EVERYTHING ELSE IS LOCKED to the supplied image: exact cabinetry dimensions and positions, neutral smoked-brown timber finish on towers, shelves, dining furniture and herringbone floor, muted olive painted fronts, cream flat tile backsplash and brass sockets, sink/faucet, existing appliances and coffee niche, decor, window, room geometry, camera/crop, warm daylight, fixtures, shadows and exposure.
+One local appliance-size edit, same clean photorealistic 3:2 landscape image, no restyling, extra objects, text or watermark.
