@@ -1,0 +1,621 @@
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.min.js"
+  }
+}
+</script>
+
+<style>
+  #kitchen-precision-3d {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    color: var(--foreground);
+  }
+
+  #kitchen-precision-3d .k3-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #kitchen-precision-3d button {
+    min-height: 34px;
+    padding: 7px 11px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--card-foreground);
+    font: inherit;
+    cursor: pointer;
+  }
+
+  #kitchen-precision-3d button[aria-pressed="true"] {
+    background: var(--primary);
+    color: var(--primary-foreground);
+    border-color: var(--primary);
+  }
+
+  #kitchen-precision-3d .k3-slider {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 34px;
+    padding-inline: 8px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--card-foreground);
+  }
+
+  #kitchen-precision-3d input[type="range"] {
+    width: 130px;
+  }
+
+  #kitchen-precision-3d .k3-stage {
+    position: relative;
+    width: 100%;
+    height: min(74vw, 660px);
+    min-height: 460px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--muted);
+  }
+
+  #kitchen-precision-3d canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: none;
+  }
+
+  #kitchen-precision-3d canvas:active {
+    cursor: grabbing;
+  }
+
+  #kitchen-precision-3d .k3-status {
+    min-height: 24px;
+    color: var(--muted-foreground);
+  }
+
+  #kitchen-precision-3d .k3-warning {
+    position: absolute;
+    inset: 12px 12px auto auto;
+    max-width: 330px;
+    padding: 8px 10px;
+    border: 1px solid color-mix(in srgb, var(--destructive) 45%, var(--border));
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--card) 92%, transparent);
+    color: var(--card-foreground);
+    pointer-events: none;
+  }
+
+  #kitchen-precision-3d .k3-help {
+    color: var(--muted-foreground);
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    #kitchen-precision-3d .k3-stage {
+      min-height: 500px;
+      height: 118vw;
+    }
+
+    #kitchen-precision-3d .k3-slider {
+      width: 100%;
+    }
+  }
+</style>
+
+<section id="kitchen-precision-3d" aria-label="Интерактивная размерная модель кухни">
+  <div class="k3-toolbar" aria-label="Управление моделью">
+    <button type="button" data-view="perspective" aria-pressed="true">Перспектива</button>
+    <button type="button" data-view="top" aria-pressed="false">План сверху</button>
+    <button type="button" data-view="long" aria-pressed="false">Вдоль кухни</button>
+    <button type="button" data-action="walls" aria-pressed="true">Стены</button>
+    <button type="button" data-action="dimensions" aria-pressed="false">Размеры</button>
+    <button type="button" data-action="breakfast" aria-pressed="true">Закрыть правый пенал</button>
+    <label class="k3-slider">
+      <span>Простенок до проёма: <output>140</output> мм</span>
+      <input type="range" min="140" max="900" step="10" value="140" aria-label="Простенок до фасадного проёма в миллиметрах">
+    </label>
+  </div>
+
+  <div class="k3-stage">
+    <canvas role="img" aria-label="Вращаемая точная трехмерная модель Г-образной кухни"></canvas>
+    <div class="k3-warning">Положение фасадного проёма имеет низкую уверенность. Ширина 1490 мм взята с плана; простенок регулируется.</div>
+  </div>
+
+  <div class="k3-status" role="status">Выберите шкаф или прибор. Все размеры модели указаны в миллиметрах.</div>
+  <div class="k3-help">Тяните мышью или пальцем — вращение · колесо/щипок — масштаб · клик — назначение модуля</div>
+</section>
+
+<script type="module">
+  import * as THREE from 'three';
+
+  const root = document.getElementById('kitchen-precision-3d');
+  const stage = root.querySelector('.k3-stage');
+  const canvas = root.querySelector('canvas');
+  const status = root.querySelector('.k3-status');
+  const slider = root.querySelector('input[type="range"]');
+  const sliderOutput = root.querySelector('output');
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false, powerPreference: 'high-performance' });
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.15;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFShadowMap;
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xd7d1c7);
+
+  const camera = new THREE.PerspectiveCamera(38, 1, 0.03, 40);
+  const target = new THREE.Vector3(0.92, 1.18, 2.38);
+  const orbit = { yaw: 1.86, pitch: 0.30, distance: 7.00, dragging: false, x: 0, y: 0, pinch: 0 };
+
+  function canvasTexture(size, painter, repeatX = 1, repeatY = 1) {
+    const surface = document.createElement('canvas');
+    surface.width = size;
+    surface.height = size;
+    const context = surface.getContext('2d');
+    painter(context, size);
+    const texture = new THREE.CanvasTexture(surface);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set(repeatX, repeatY);
+    texture.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
+    return texture;
+  }
+
+  const walnutTexture = canvasTexture(512, (context, size) => {
+    const gradient = context.createLinearGradient(0, 0, size, 0);
+    gradient.addColorStop(0, '#2b1711');
+    gradient.addColorStop(0.48, '#55301f');
+    gradient.addColorStop(1, '#301912');
+    context.fillStyle = gradient;
+    context.fillRect(0, 0, size, size);
+    for (let index = 0; index < 70; index += 1) {
+      const x = (index * 73) % size;
+      context.strokeStyle = `rgba(18,8,5,${0.08 + (index % 5) * 0.018})`;
+      context.lineWidth = 1 + index % 3;
+      context.beginPath();
+      context.moveTo(x, 0);
+      context.bezierCurveTo(x + 18, size * 0.28, x - 16, size * 0.72, x + 8, size);
+      context.stroke();
+    }
+  }, 1.2, 2.2);
+
+  const floorTexture = canvasTexture(512, (context, size) => {
+    context.fillStyle = '#4c2c20';
+    context.fillRect(0, 0, size, size);
+    context.strokeStyle = 'rgba(198,139,88,.38)';
+    context.lineWidth = 7;
+    for (let offset = -size; offset < size * 2; offset += 72) {
+      context.beginPath();
+      context.moveTo(offset, 0);
+      context.lineTo(offset + size, size);
+      context.stroke();
+      context.beginPath();
+      context.moveTo(offset + size * 0.5, 0);
+      context.lineTo(offset - size * 0.5, size);
+      context.stroke();
+    }
+  }, 4, 3);
+
+  const tileTexture = canvasTexture(512, (context, size) => {
+    context.fillStyle = '#596246';
+    context.fillRect(0, 0, size, size);
+    context.strokeStyle = 'rgba(223,215,185,.38)';
+    context.lineWidth = 7;
+    const tile = size / 6;
+    for (let x = 0; x <= size; x += tile) {
+      context.beginPath();
+      context.moveTo(x, 0);
+      context.lineTo(x, size);
+      context.stroke();
+    }
+    for (let y = 0; y <= size; y += tile) {
+      context.beginPath();
+      context.moveTo(0, y);
+      context.lineTo(size, y);
+      context.stroke();
+    }
+  }, 5, 2);
+
+  const materials = {
+    wall: new THREE.MeshStandardMaterial({ color: 0xcfc3b2, roughness: 0.92, transparent: true, opacity: 0.42, depthWrite: false, side: THREE.DoubleSide }),
+    wallEdge: new THREE.MeshStandardMaterial({ color: 0xa99d8c, roughness: 0.86 }),
+    floor: new THREE.MeshStandardMaterial({ map: floorTexture, color: 0xffffff, roughness: 0.7 }),
+    walnut: new THREE.MeshStandardMaterial({ map: walnutTexture, color: 0xffffff, roughness: 0.52 }),
+    walnutInset: new THREE.MeshStandardMaterial({ map: walnutTexture, color: 0x76584a, roughness: 0.64 }),
+    carcass: new THREE.MeshStandardMaterial({ color: 0x201713, roughness: 0.72 }),
+    graphite: new THREE.MeshStandardMaterial({ color: 0x282825, roughness: 0.38 }),
+    olive: new THREE.MeshStandardMaterial({ map: tileTexture, color: 0xffffff, roughness: 0.72 }),
+    brass: new THREE.MeshStandardMaterial({ color: 0x9a7040, roughness: 0.28, metalness: 0.72 }),
+    glass: new THREE.MeshPhysicalMaterial({ color: 0x9fc2cc, roughness: 0.12, transmission: 0.65, transparent: true, opacity: 0.48, side: THREE.DoubleSide }),
+    appliance: new THREE.MeshStandardMaterial({ color: 0x111312, roughness: 0.2, metalness: 0.35 }),
+    steel: new THREE.MeshStandardMaterial({ color: 0xb8b9b4, roughness: 0.22, metalness: 0.82 }),
+    interior: new THREE.MeshStandardMaterial({ color: 0x8a694a, roughness: 0.7 }),
+    dimension: new THREE.LineBasicMaterial({ color: 0xc34e3f }),
+    uncertain: new THREE.MeshStandardMaterial({ color: 0xc68b35, transparent: true, opacity: 0.34, side: THREE.DoubleSide })
+  };
+  Object.values(materials).forEach(material => {
+    if ('side' in material) material.side = THREE.DoubleSide;
+  });
+
+  const world = new THREE.Group();
+  const walls = new THREE.Group();
+  const cabinets = new THREE.Group();
+  const dimensions = new THREE.Group();
+  const facade = new THREE.Group();
+  const breakfastInterior = new THREE.Group();
+  scene.add(world);
+  world.add(walls, facade, cabinets, dimensions, breakfastInterior);
+
+  const selectable = [];
+
+  function box(group, x, y, z, sizeX, sizeY, sizeZ, material, name = '', data = null) {
+    const mesh = new THREE.Mesh(new THREE.BoxGeometry(sizeX, sizeY, sizeZ), material);
+    mesh.position.set(x, y, z);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    if (name) mesh.name = name;
+    if (data) {
+      mesh.userData.selection = data;
+      selectable.push(mesh);
+    }
+    group.add(mesh);
+    return mesh;
+  }
+
+  function cylinder(group, x, y, z, radius, height, material, rotationX = 0) {
+    const mesh = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius, height, 28), material);
+    mesh.position.set(x, y, z);
+    mesh.rotation.x = rotationX;
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    group.add(mesh);
+    return mesh;
+  }
+
+  function line(group, points, material = materials.dimension) {
+    const geometry = new THREE.BufferGeometry().setFromPoints(points.map(([x, y, z]) => new THREE.Vector3(x, y, z)));
+    const mesh = new THREE.Line(geometry, material);
+    group.add(mesh);
+    return mesh;
+  }
+
+  function label(group, text, x, y, z, scale = 0.38, background = '#f7f1e8', color = '#3a2920') {
+    const surface = document.createElement('canvas');
+    surface.width = 512;
+    surface.height = 128;
+    const context = surface.getContext('2d');
+    context.fillStyle = background;
+    context.fillRect(0, 0, surface.width, surface.height);
+    context.strokeStyle = '#a79078';
+    context.lineWidth = 6;
+    context.strokeRect(3, 3, surface.width - 6, surface.height - 6);
+    context.fillStyle = color;
+    context.font = '500 42px system-ui, sans-serif';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.fillText(text, surface.width / 2, surface.height / 2);
+    const texture = new THREE.CanvasTexture(surface);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: texture, depthTest: false }));
+    sprite.position.set(x, y, z);
+    sprite.scale.set(scale * 4, scale, 1);
+    sprite.renderOrder = 20;
+    group.add(sprite);
+    return sprite;
+  }
+
+  function framedLongFront(zCenter, moduleWidth, yBottom, height, data, material = materials.walnut) {
+    const frontX = 0.612;
+    const panel = box(cabinets, frontX, yBottom + height / 2, zCenter, 0.024, height - 0.012, moduleWidth - 0.012, material, '', data);
+    box(cabinets, frontX + 0.014, yBottom + 0.035, zCenter, 0.018, 0.052, moduleWidth - 0.045, materials.walnutInset);
+    box(cabinets, frontX + 0.014, yBottom + height - 0.035, zCenter, 0.018, 0.052, moduleWidth - 0.045, materials.walnutInset);
+    box(cabinets, frontX + 0.014, yBottom + height / 2, zCenter - moduleWidth / 2 + 0.035, 0.018, height - 0.09, 0.052, materials.walnutInset);
+    box(cabinets, frontX + 0.014, yBottom + height / 2, zCenter + moduleWidth / 2 - 0.035, 0.018, height - 0.09, 0.052, materials.walnutInset);
+    return panel;
+  }
+
+  function framedShortFront(xCenter, moduleWidth, yBottom, height, data, material = materials.walnut) {
+    const frontZ = 2.958;
+    const panel = box(cabinets, xCenter, yBottom + height / 2, frontZ, moduleWidth - 0.012, height - 0.012, 0.024, material, '', data);
+    box(cabinets, xCenter, yBottom + 0.035, frontZ - 0.014, moduleWidth - 0.045, 0.052, 0.018, materials.walnutInset);
+    box(cabinets, xCenter, yBottom + height - 0.035, frontZ - 0.014, moduleWidth - 0.045, 0.052, 0.018, materials.walnutInset);
+    box(cabinets, xCenter - moduleWidth / 2 + 0.035, yBottom + height / 2, frontZ - 0.014, 0.052, height - 0.09, 0.018, materials.walnutInset);
+    box(cabinets, xCenter + moduleWidth / 2 - 0.035, yBottom + height / 2, frontZ - 0.014, 0.052, height - 0.09, 0.018, materials.walnutInset);
+    return panel;
+  }
+
+  function addHandleLong(z, y, length = 0.18) {
+    box(cabinets, 0.64, y, z, 0.025, length, 0.022, materials.brass);
+  }
+
+  function addHandleShort(x, y, length = 0.18) {
+    box(cabinets, x, y, 2.93, 0.022, length, 0.025, materials.brass);
+  }
+
+  function addBaseLong(id, title, start, width) {
+    const data = { id, title, size: `${Math.round(width * 1000)} × 600 × 900 мм` };
+    box(cabinets, 0.3, 0.45, start + width / 2, 0.6, 0.9, width - 0.008, materials.carcass, '', data);
+    framedLongFront(start + width / 2, width, 0.08, 0.76, data);
+    return data;
+  }
+
+  function addUpperLong(id, title, start, width) {
+    const data = { id, title, size: `${Math.round(width * 1000)} × 350 × 1300 мм` };
+    box(cabinets, 0.175, 2.1, start + width / 2, 0.35, 1.3, width - 0.01, materials.carcass, '', data);
+    const front = box(cabinets, 0.362, 2.1, start + width / 2, 0.024, 1.27, width - 0.022, materials.walnut, '', data);
+    front.userData.selection = data;
+  }
+
+  box(world, 2.95, 0.04, 1.785, 5.9, 0.08, 3.57, materials.floor);
+
+  box(walls, -0.0625, 1.6, 1.785, 0.125, 3.2, 3.57, materials.wall);
+  box(walls, 0.86, 1.6, 3.6325, 1.72, 3.2, 0.125, materials.wall);
+
+  const fridgeData = { id: 'A01', title: 'Встроенный холодильник + отдельная морозилка', size: '600 × 600 × 2750 мм' };
+  box(cabinets, 0.3, 1.375, 0.36, 0.6, 2.75, 0.6, materials.carcass, '', fridgeData);
+  framedLongFront(0.36, 0.592, 0.05, 0.72, fridgeData);
+  framedLongFront(0.36, 0.592, 0.79, 1.91, fridgeData);
+  addHandleLong(0.61, 0.47, 0.24);
+  addHandleLong(0.61, 1.67, 0.34);
+  const longModules = [
+    ['A02', 'Ящики и посадочная поверхность', 0.66, 0.45],
+    ['A03', 'Шкаф мойки', 1.11, 0.60],
+    ['A04', 'Встроенная посудомоечная машина', 1.71, 0.60],
+    ['A05', 'Индукционная панель и ящики', 2.31, 0.60],
+    ['A06', 'Глухой угловой модуль', 2.91, 0.60]
+  ];
+  longModules.forEach(([id, title, start, width]) => {
+    addBaseLong(id, title, start, width);
+    addUpperLong(`${id}-UP`, `Верхний шкаф над ${id}`, start, width);
+  });
+
+  box(cabinets, 0.31, 0.925, 2.115, 0.62, 0.05, 2.91, materials.graphite);
+  box(cabinets, 0.018, 1.175, 2.115, 0.025, 0.55, 2.91, materials.olive);
+  box(cabinets, 0.315, 0.958, 1.41, 0.42, 0.02, 0.42, materials.appliance, '', { id: 'A03-SINK', title: 'Врезная мойка', size: '420 × 420 мм, ориентировочно' });
+  cylinder(cabinets, 0.28, 1.12, 1.64, 0.025, 0.48, materials.brass);
+  const spout = new THREE.Mesh(new THREE.TorusGeometry(0.16, 0.018, 12, 28, Math.PI), materials.brass);
+  spout.position.set(0.28, 1.37, 1.64);
+  spout.rotation.z = Math.PI / 2;
+  cabinets.add(spout);
+  box(cabinets, 0.315, 0.962, 2.61, 0.48, 0.018, 0.48, materials.appliance, '', { id: 'A05-HOB', title: 'Индукционная панель', size: '600 мм модуль' });
+
+  box(cabinets, 0.30, 1.18, 2.61, 0.03, 0.16, 0.42, materials.appliance);
+
+  function addTripleSocket(z, id) {
+    const data = { id, title: 'Тройная розетка над рабочей поверхностью', size: 'центр 1180 мм от чистого пола' };
+    box(cabinets, 0.044, 1.18, z, 0.026, 0.105, 0.24, materials.wallEdge, '', data);
+    [-0.07, 0, 0.07].forEach(offset => {
+      box(cabinets, 0.061, 1.18, z + offset, 0.014, 0.036, 0.034, materials.appliance);
+    });
+  }
+
+  addTripleSocket(0.885, 'E02');
+  addTripleSocket(2.01, 'E04');
+
+  const cornerData = { id: 'B01', title: 'Угловая зона', size: '600 × 600 мм' };
+  box(cabinets, 0.30, 0.45, 3.27, 0.60, 0.90, 0.60, materials.carcass, '', cornerData);
+  box(cabinets, 0.30, 0.925, 3.26, 0.62, 0.05, 0.62, materials.graphite);
+  framedShortFront(0.30, 0.592, 0.08, 0.76, cornerData);
+  box(cabinets, 0.30, 2.10, 3.395, 0.60, 1.30, 0.35, materials.carcass, '', cornerData);
+  box(cabinets, 0.30, 2.10, 3.208, 0.57, 1.27, 0.024, materials.walnut, '', cornerData);
+
+  const applianceData = { id: 'B02', title: 'Колонна: духовка + микроволновка', size: '600 × 600 × 2750 мм' };
+  box(cabinets, 0.90, 1.375, 3.27, 0.60, 2.75, 0.60, materials.carcass, '', applianceData);
+  framedShortFront(0.90, 0.592, 0.05, 0.50, applianceData);
+  box(cabinets, 0.90, 0.92, 2.946, 0.54, 0.58, 0.035, materials.appliance, '', { id: 'OVEN', title: 'Встроенная духовка', size: '600 мм' });
+  box(cabinets, 0.90, 1.46, 2.946, 0.54, 0.34, 0.035, materials.appliance, '', { id: 'MICROWAVE', title: 'Встроенная микроволновка', size: '600 мм фасад' });
+  framedShortFront(0.90, 0.592, 1.69, 1.01, applianceData);
+  addHandleShort(0.90, 2.17, 0.22);
+  const pantryData = { id: 'B03', title: 'Breakfast-пенал: запасы + скрытая кофе-зона', size: '450 × 600 × 2750 мм' };
+  box(cabinets, 1.425, 1.375, 3.27, 0.45, 2.75, 0.60, materials.carcass, '', pantryData);
+  const pantryDoorLower = framedShortFront(1.425, 0.442, 0.05, 1.02, pantryData);
+  const pantryDoorUpper = framedShortFront(1.425, 0.442, 1.08, 1.62, pantryData);
+  addHandleShort(1.59, 1.36, 0.28);
+
+  box(breakfastInterior, 1.425, 0.32, 3.00, 0.37, 0.12, 0.48, materials.interior);
+  box(breakfastInterior, 1.425, 0.58, 3.00, 0.37, 0.12, 0.48, materials.interior);
+  box(breakfastInterior, 1.425, 0.84, 3.00, 0.37, 0.12, 0.48, materials.interior);
+  box(breakfastInterior, 1.425, 1.14, 3.00, 0.39, 0.035, 0.50, materials.graphite);
+  box(breakfastInterior, 1.425, 1.36, 2.985, 0.28, 0.30, 0.32, materials.appliance, '', { id: 'COFFEE', title: 'Кофемашина в скрытой вентилируемой нише', size: 'Ниша 450 мм' });
+  box(breakfastInterior, 1.425, 1.39, 2.812, 0.22, 0.19, 0.018, materials.graphite);
+  box(breakfastInterior, 1.425, 1.43, 2.798, 0.105, 0.042, 0.012, materials.brass);
+  cylinder(breakfastInterior, 1.425, 1.31, 2.80, 0.018, 0.075, materials.steel, Math.PI / 2);
+  box(breakfastInterior, 1.57, 1.49, 3.47, 0.105, 0.08, 0.018, materials.wallEdge, '', { id: 'E07C', title: 'Розетка кофемашины внутри пенала', size: 'отдельная доступная точка' });
+  cylinder(breakfastInterior, 1.425, 1.55, 2.94, 0.06, 0.10, materials.brass);
+  [1.72, 2.02, 2.32].forEach(y => box(breakfastInterior, 1.425, y, 3.00, 0.39, 0.035, 0.50, materials.interior));
+  breakfastInterior.visible = true;
+  pantryDoorLower.visible = false;
+  pantryDoorUpper.visible = false;
+
+  box(cabinets, 1.685, 1.375, 3.27, 0.07, 2.75, 0.60, materials.walnutInset, '', { id: 'B04', title: 'Добор у прохода', size: '70 × 600 × 2750 мм' });
+
+  function rebuildFacade() {
+    while (facade.children.length) facade.remove(facade.children[0]);
+    const pier = Number(slider.value) / 1000;
+    const openingWidth = 1.49;
+    const modeledLength = 3.2;
+    const sill = 0.18;
+    const openingHeight = 2.34;
+    const lintelHeight = 3.2 - sill - openingHeight;
+    if (pier > 0) box(facade, pier / 2, 1.6, -0.0625, pier, 3.2, 0.125, materials.wall);
+    box(facade, pier + openingWidth / 2, sill / 2, -0.0625, openingWidth, sill, 0.125, materials.wall);
+    box(facade, pier + openingWidth / 2, sill + openingHeight + lintelHeight / 2, -0.0625, openingWidth, lintelHeight, 0.125, materials.wall);
+    const remainder = Math.max(0.1, modeledLength - pier - openingWidth);
+    box(facade, pier + openingWidth + remainder / 2, 1.6, -0.0625, remainder, 3.2, 0.125, materials.wall);
+    box(facade, pier + openingWidth / 2, sill + openingHeight / 2, -0.04, openingWidth - 0.05, openingHeight - 0.05, 0.025, materials.glass);
+    box(facade, 0.31, 1.38, -0.01, 0.62, 2.75, 0.02, materials.uncertain);
+    const blocked = Math.max(0, 620 - Number(slider.value));
+    root.querySelector('.k3-warning').textContent = blocked > 0
+      ? `Проверка: при простенке ${slider.value} мм холодильник глубиной 600 мм перекрывает линию проёма примерно на ${blocked} мм. Размер простенка нужно подтвердить обмером.`
+      : `Простенок ${slider.value} мм не конфликтует с корпусом глубиной 600 мм. Но этот размер всё равно требует подтверждения обмером.`;
+    sliderOutput.value = slider.value;
+    render();
+  }
+
+  line(dimensions, [[-0.28, 0.08, 0], [-0.28, 0.08, 3.57]]);
+  line(dimensions, [[-0.34, 0.08, 0], [-0.22, 0.08, 0]]);
+  line(dimensions, [[-0.34, 0.08, 3.57], [-0.22, 0.08, 3.57]]);
+  label(dimensions, '3570 мм', -0.31, 0.22, 1.785, 0.22);
+
+  line(dimensions, [[0, 0.08, 3.92], [1.72, 0.08, 3.92]]);
+  line(dimensions, [[0, 0.08, 3.86], [0, 0.08, 3.98]]);
+  line(dimensions, [[1.72, 0.08, 3.86], [1.72, 0.08, 3.98]]);
+  label(dimensions, '1720 мм', 0.86, 0.22, 3.92, 0.22);
+
+  line(dimensions, [[0, 1.08, 1.98], [0.62, 1.08, 1.98]]);
+  label(dimensions, '620 мм', 0.31, 1.22, 1.98, 0.17);
+  line(dimensions, [[0, 2.83, 2.10], [0.35, 2.83, 2.10]]);
+  label(dimensions, '350 мм', 0.175, 2.97, 2.10, 0.16);
+  dimensions.visible = false;
+
+  scene.add(new THREE.AmbientLight(0xfff3e4, 0.7));
+  scene.add(new THREE.HemisphereLight(0xe8eef2, 0x4a382d, 2.0));
+  const sun = new THREE.DirectionalLight(0xffe5c1, 3.2);
+  sun.position.set(4.8, 7.0, -3.0);
+  sun.target.position.set(0.8, 0.6, 2.4);
+  sun.castShadow = true;
+  sun.shadow.mapSize.set(2048, 2048);
+  sun.shadow.camera.left = -5;
+  sun.shadow.camera.right = 5;
+  sun.shadow.camera.top = 5;
+  sun.shadow.camera.bottom = -5;
+  scene.add(sun, sun.target);
+
+  const fill = new THREE.PointLight(0xffc98f, 20, 7, 2);
+  fill.position.set(2.2, 2.5, 1.2);
+  scene.add(fill);
+
+  function updateCamera() {
+    const horizontal = Math.cos(orbit.pitch) * orbit.distance;
+    camera.position.set(
+      target.x + Math.sin(orbit.yaw) * horizontal,
+      target.y + Math.sin(orbit.pitch) * orbit.distance,
+      target.z + Math.cos(orbit.yaw) * horizontal
+    );
+    camera.lookAt(target);
+    camera.updateMatrixWorld();
+    render();
+  }
+
+  function setView(view) {
+    if (view === 'top') {
+      orbit.yaw = Math.PI;
+      orbit.pitch = 1.51;
+      orbit.distance = 6.6;
+    } else if (view === 'long') {
+      orbit.yaw = Math.PI / 2;
+      orbit.pitch = 0.22;
+      orbit.distance = 5.8;
+    } else {
+      orbit.yaw = 1.86;
+      orbit.pitch = 0.30;
+      orbit.distance = 7.00;
+    }
+    root.querySelectorAll('[data-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === view)));
+    updateCamera();
+  }
+
+  function resize() {
+    const width = Math.max(1, stage.clientWidth);
+    const height = Math.max(1, stage.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(width, height, false);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    render();
+  }
+
+  function render() {
+    renderer.render(scene, camera);
+    canvas.dataset.rendered = 'true';
+  }
+
+  root.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view)));
+
+  root.querySelector('[data-action="walls"]').addEventListener('click', event => {
+    const visible = !walls.visible;
+    walls.visible = visible;
+    facade.visible = visible;
+    event.currentTarget.setAttribute('aria-pressed', String(visible));
+    render();
+  });
+
+  root.querySelector('[data-action="dimensions"]').addEventListener('click', event => {
+    dimensions.visible = !dimensions.visible;
+    event.currentTarget.setAttribute('aria-pressed', String(dimensions.visible));
+    render();
+  });
+
+  root.querySelector('[data-action="breakfast"]').addEventListener('click', event => {
+    breakfastInterior.visible = !breakfastInterior.visible;
+    pantryDoorLower.visible = !breakfastInterior.visible;
+    pantryDoorUpper.visible = !breakfastInterior.visible;
+    event.currentTarget.setAttribute('aria-pressed', String(breakfastInterior.visible));
+    event.currentTarget.textContent = breakfastInterior.visible ? 'Закрыть правый пенал' : 'Открыть правый пенал';
+    render();
+  });
+
+  slider.value = '140';
+  slider.addEventListener('input', rebuildFacade);
+
+  canvas.addEventListener('pointerdown', event => {
+    orbit.dragging = true;
+    orbit.x = event.clientX;
+    orbit.y = event.clientY;
+    canvas.setPointerCapture(event.pointerId);
+  });
+
+  canvas.addEventListener('pointermove', event => {
+    if (!orbit.dragging) return;
+    const dx = event.clientX - orbit.x;
+    const dy = event.clientY - orbit.y;
+    orbit.x = event.clientX;
+    orbit.y = event.clientY;
+    orbit.yaw -= dx * 0.006;
+    orbit.pitch = THREE.MathUtils.clamp(orbit.pitch + dy * 0.005, 0.08, 1.52);
+    updateCamera();
+  });
+
+  canvas.addEventListener('pointerup', event => {
+    orbit.dragging = false;
+    canvas.releasePointerCapture(event.pointerId);
+  });
+
+  canvas.addEventListener('wheel', event => {
+    event.preventDefault();
+    orbit.distance = THREE.MathUtils.clamp(orbit.distance * Math.exp(event.deltaY * 0.001), 2.8, 10.5);
+    updateCamera();
+  }, { passive: false });
+
+  canvas.addEventListener('click', event => {
+    if (Math.abs(event.clientX - orbit.x) > 4 || Math.abs(event.clientY - orbit.y) > 4) return;
+    const rect = canvas.getBoundingClientRect();
+    const pointer = new THREE.Vector2(
+      ((event.clientX - rect.left) / rect.width) * 2 - 1,
+      -((event.clientY - rect.top) / rect.height) * 2 + 1
+    );
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(pointer, camera);
+    const hit = raycaster.intersectObjects(selectable, false)[0];
+    status.textContent = hit
+      ? `${hit.object.userData.selection.id} · ${hit.object.userData.selection.title} · ${hit.object.userData.selection.size}`
+      : 'Выберите шкаф или прибор. Все размеры модели указаны в миллиметрах.';
+  });
+
+  const resizeObserver = new ResizeObserver(resize);
+  resizeObserver.observe(stage);
+  rebuildFacade();
+  updateCamera();
+</script>

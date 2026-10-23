@@ -85,7 +85,7 @@
     "technical_plan_and_elevations": null,
     "photoreal_render": "../design-visuals/25-kitchen-measured-plan-render.png",
     "geometry_reference": "../design-visuals/22-kitchen-geometry-reference.png",
-    "interactive_3d": "/Users/nikita/.codex/visualizations/2026/10/11/01a12c38-17fb-7742-a097-9bef2d65dcbb/kitchen-3d.html",
+    "interactive_3d": "kitchen-3d.html",
     "render_qa": "kitchen-render-qa-v3.md"
   },
   "pending_before_construction": [
