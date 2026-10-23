@@ -1,0 +1,20 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 69-bedroom-reference-oak-floor.png.
+Референс только для пола: 73-kitchen-olive-walnut-chocolate-herringbone.png.
+Изменение: в спальне тёмная шоколадная ёлочка, совпадающая с полом последнего варианта кухни; остальная сцена сохраняется.
+
+Use case: precise-object-edit.
+Replace ONLY THE FLOOR in Image 1 with the SAME dark chocolate herringbone timber floor shown in Image 2.
+
+INPUT ROLES:
+Image 1, 69-bedroom-reference-oak-floor.png: bedroom edit target; all architecture, furniture, finishes and composition are locked.
+Image 2, 73-kitchen-olive-walnut-chocolate-herringbone.png: FLOOR reference ONLY, for color, natural grain, parquet block proportions and laying pattern. Do not import kitchen furniture or alter the bedroom styling.
+
+ONE CHANGE:
+Remove every exposed patch of light straight oak planks from the bedroom. Install the kitchen's rich warm DARK CHOCOLATE-BROWN classic HERRINGBONE parquet, matching Image 2 closely. Square-ended rectangular wood blocks alternate at 90 degrees to form the herringbone pattern. Match its medium plank/block scale, fine joints, restrained board-to-board tone variation, natural grain and matte/satin finish. Warm deep brown with visible detail, not black, gray or orange; no straight wide planks, chevron, tiles, or decorative mosaic.
+The same floor must continue convincingly in all exposed patches beside the bed and existing rug, under/around the armchair, desk and desk chair, in front of the olive bookcase, and through the right-hand open passage in front of the wardrobe. Correct perspective and believable contact shadows. Keep the existing rug exactly intact and do not extend parquet onto bed textiles, furniture or baseboards.
+
+KEEP EVERYTHING ELSE EXACTLY AS IMAGE 1:
+Same eye-level camera, 3:2 landscape crop, room geometry, window and sheer/heavy curtains at left, warm cream upper walls and ceiling, cornice, olive wall panelling and tall bookcase, books/plant/art/decor, brown leather armchair, timber desk and chair, brass desk lamp, framed pictures and picture light, ceiling pendant, open passage and walnut wardrobe, foreground bed, green patterned throw, cream bedding and all rugs.
+Preserve every color outside the floor, including the exact olive paint and existing timber furniture tones. Keep daylight direction, dappled sunlight patches, warm 2700K light, exposure and white balance. Adapt only the new floor's local shading, contact shadows and reflections; do not darken or color-grade the entire image.
+One seamless photorealistic edited photograph of this bedroom with the kitchen's matching chocolate herringbone floor. No text, labels, watermark, collage or new objects.

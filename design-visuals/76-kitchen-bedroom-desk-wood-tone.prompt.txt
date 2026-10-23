@@ -1,0 +1,24 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 73-kitchen-olive-walnut-chocolate-herringbone.png.
+Референс оттенка дерева: письменный стол в центре изображения 75-bedroom-chocolate-herringbone-clean.png.
+Изменение: деревянные пеналы и полки кухни в более светлом тёплом коричневом оттенке письменного стола; оливковые фасады и тёмная ёлочка сохраняются.
+
+Use case: precise-object-edit.
+Recolor ONLY the dark wooden kitchen joinery in Image 1 to match the WOOD FINISH OF THE WRITING DESK in Image 2.
+
+INPUT ROLES:
+Image 1, 73-kitchen-olive-walnut-chocolate-herringbone.png: kitchen edit target and locked scene.
+Image 2, 75-bedroom-chocolate-herringbone-clean.png: material/color reference ONLY. The exact sample is the central WRITING DESK beneath the brass desk lamp, specifically its timber front apron/drawer fronts, top and solid legs. Do not sample the bedroom's dark parquet, green bookcase, leather armchair, wardrobe shadows or bright sunlight reflections.
+
+ONE CHANGE — KITCHEN WOOD MATERIAL:
+Change the kitchen's currently very dark chocolate walnut cabinetry to the bedroom desk's MEDIUM WARM NATURAL BROWN walnut/chestnut finish: rich cognac/caramel-brown wood with restrained amber warmth and authentic natural grain, visibly lighter and warmer than the existing dark kitchen timber, but still a substantial medium brown. Match the desk's wood color closely as a material under the kitchen's existing daylight. Not pale oak, blond wood, yellow wood, bright orange, red mahogany, black walnut or gray.
+Apply consistently to the FULL-HEIGHT timber fridge/freezer tower at image-left; the full-height timber oven/microwave and coffee-pantry towers at image-right; their inset panels, door frames, drawers, visible sides, cornices and trims; the two floating timber shelves; coffee niche interior; and the exposed timber interior shelves/back panels inside the glazed cabinets.
+Preserve the existing fine framed doors, natural grain, panel construction, satin/matte finish and aged-brass handles. Recolor the wood material without redesigning or moving the joinery.
+
+LOCK ALL OTHER DETAILS OF IMAGE 1:
+Keep the exact existing WARM MUTED OLIVE painted cabinet fronts, drawer fronts, frames, sides and plinths. Do not convert the olive cabinetry to wood or borrow a different green.
+Keep the dark warm CHOCOLATE HERRINGBONE parquet exactly, including its shade, square-ended block geometry, scale, direction and all visible floor patches. Do not lighten the floor or change the laying pattern.
+Keep the round dining table and chairs in their existing wood finish, the cream embossed floral backsplash, graphite stone countertop, sink and faucet, all appliances and coffee machine, glass, display contents, brass details, art, books, plant and decorations.
+Identical camera, crop, 3:2 landscape format, room geometry, L-shaped cabinetry arrangement, left window, cream walls, ceiling and cornice, two opal globe ceiling fixtures and black/brass dome pendant.
+Preserve original exposure and white balance, dappled sunlight, warm 2700K lighting, under-cabinet glow and contact shadows. Only physically necessary shading/reflections on the recolored wood may change; no global relighting or color grading.
+One clean, high-detail, seamless photorealistic edited photograph of the same kitchen with wooden cabinetry matching the bedroom writing desk. No added noise, text, watermark, collage or new objects.

@@ -1,0 +1,32 @@
+Режим: встроенный image_gen, редактирование.
+Основа: 68-bedroom-chocolate-floor-bookcase.png.
+Референс только для пола: 63-pinterest-study-reference.jpg.
+Изменение: тёплый натуральный дуб, прямые широкие доски вместо тёмной ёлочки. Остальная сцена сохраняется.
+
+Use case: precise-object-edit.
+Edit Image 1 ONLY by replacing its visible wood FLOOR with the wood flooring from Image 2.
+
+INPUT ROLES:
+Image 1 (68-bedroom-chocolate-floor-bookcase.png) is the edit target. Its architecture, camera, furniture, styling, light and every surface other than the floor are locked.
+Image 2 (63-pinterest-study-reference.jpg) is a FLOOR MATERIAL AND LAYING-PATTERN reference only. Do not transfer its room, furniture, rug, skylight, walls, composition or lighting fixtures.
+
+THE SINGLE CHANGE:
+Remove the very dark chocolate herringbone parquet in Image 1. Replace ALL exposed floor surfaces with the same warm natural medium-light oak plank flooring visible in the lower-right portion of Image 2: warm honey-beige / golden tan oak with a restrained brown undertone, natural visible grain, subtle small knots and gentle board-to-board variation, matte oiled finish. Match Image 2's oak hue and tonal depth closely. The result is substantially lighter than Image 1's existing chocolate floor, but is NOT bleached white, gray, orange or yellow laminate.
+Use long, straight, wide timber planks with normal staggered end joints and fine seams, approximately 180–220 mm board width, convincingly scaled and projected into this bedroom. Absolutely no herringbone, chevron, parquet blocks, square tiles or decorative layout.
+The new oak floor must be continuous and consistent across every exposed patch: in front of the desk and chair, below the leather armchair, beside the foreground bed/rug, and through the open passage at image-right in front of the wardrobe. Keep existing baseboards and furniture in their exact places. Do not cover any furniture, bed, rug or textile with wood texture.
+
+LOCK EVERYTHING ELSE TO IMAGE 1:
+Same exact camera position, lens, crop, 3:2 landscape aspect ratio and room geometry. Preserve the full-height window and sheer and heavy curtains on the left, cream upper walls and ceiling, cornices, dark muted olive wall panelling, tall olive bookcase and its books/plant/art, brown leather armchair, walnut desk, timber chair and upholstered seat, brass desk lamp, three framed pictures and picture light, ceiling pendant, open passage and walnut wardrobe at right, foreground bed, green patterned throw and cream bedding, and all visible existing rugs. Do not add or remove anything. Do not recolor the walnut furniture or olive cabinetry.
+Preserve the original warm daylight, its direction, dappled sunlight patches, contact shadows and existing practical light. Recompute only the physically necessary shadows/reflections on the new oak surface; do not brighten or recolor the whole image or alter exposure.
+Photorealistic architectural interior photography, realistic wood grain, restrained reflections, unchanged high-detail image quality. One seamless edited photograph. No labels, text, collage or watermark.
+
+Финальная правка: замена сохранённого генератором рисунка ёлочки на прямые длинные доски.
+
+Precise local edit: CHANGE THE FLOOR LAYING GEOMETRY, not merely its color.
+Image 1 is the bedroom edit target. Image 2 is the floor reference.
+The target still has unwanted parquet/herringbone joints. ERASE the ENTIRE existing network of parquet seams and reconstruct the visible floor from scratch as simple WIDE STRAIGHT OAK PLANKS, matching the floor in Image 2.
+
+Show very long, wide rectangular oak boards (roughly 200 mm wide and 1800–2400 mm long) laid in parallel straight rows. The LONG EDGES of the boards run LEFT TO RIGHT across this image, parallel to the desk wall, with perspective-correct spacing into the distance. Each long edge must be one straight continuous seam. Only occasional staggered short butt joints between board ends. Absolutely NO zigzags, herringbone, chevrons, diagonal V shapes, diamonds, small interlocking blocks, squares, geometric mosaic, or traces of the old parquet pattern. This is regular straight-laid wide-board timber flooring.
+Apply this replacement to ALL visible floor patches, including the doorway/wardrobe passage at right. Floor is the same medium-light warm natural honey-beige oak as the reference, matte with realistic grain and a few restrained knots; not orange, whitewashed or gray. Keep the new lighter oak hue already achieved.
+
+Everything outside the floor is pixel-faithful to Image 1: identical room geometry, camera, framing, dimensions, windows, curtains, walls, olive panelling and bookcase, books and decor, leather armchair, desk, chair, lamps, framed pictures, wardrobe, foreground bed, throw, bedding and rugs. Preserve existing sunlight patches, shadows and exposure. No new objects or openings. Do not move or change any furniture or material outside the floor. Photorealistic local floor replacement, not a redesign. Same 3:2 landscape frame. No text.

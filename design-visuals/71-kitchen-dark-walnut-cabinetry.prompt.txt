@@ -1,0 +1,20 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 70-kitchen-matching-bedroom-oak-floor.png.
+Изменение: деревянные пеналы и полки в оттенке тёмного шоколадного ореха; светлый дубовый пол, оливковые фасады и композиция сохраняются.
+
+Use case: precise-object-edit.
+Edit the provided kitchen photograph to try a DARKER WOOD FINISH ON THE EXISTING WOODEN CABINETRY. This is a localized material-color change only.
+
+CHANGE:
+Change the honey/orange wood of the full-height refrigerator/freezer tower at image-left and the full-height oven/microwave and coffee-station towers at image-right to rich DARK CHOCOLATE WALNUT. Include the towers' door frames, inset panels, drawers, visible sides, wooden cornices, trims and coffee niche interior. Also apply the same dark walnut to the TWO existing floating timber shelves above the sink and to exposed wooden interior shelves/back panels inside the green-framed glazed display cabinets, so the kitchen joinery reads consistently.
+The new wood must be visibly and substantially darker than the original orange-tan wood: premium deep warm chocolate-brown walnut with restrained reddish warmth, natural nuanced grain, believable pores and satin/matte finish. Keep authentic visible grain and readable panel construction even in shadow. No near-black ebony, black paint, flat featureless brown, glossy varnish, pale oak or orange cast.
+Preserve the exact existing cabinet design: fine framed hinged doors, inset panels, aligned rails, proportions and all aged-brass hardware. Do not flatten, reface or redesign the doors.
+
+PRESERVE ALL OTHER SURFACES AND OBJECTS:
+The existing olive-green painted cabinets and glazed cabinet FRAMES retain the exact same green color and finish. Do not convert them to wood.
+The new warm LIGHT NATURAL OAK straight wide-plank floor is LOCKED and must keep its exact hue, plank width, straight laying direction, grain and seams. Do not darken the floor or restore herringbone.
+The round dining table and chairs retain their existing lighter timber color and exact form. Do not recolor or move them.
+Keep the cream embossed floral tile backsplash, graphite stone countertop, sink and faucet, appliance faces, coffee machine, glass doors, dishes, books, art, plant and decorations unchanged.
+Preserve exact architecture, camera, crop, 3:2 landscape aspect ratio, tall window at left, cream walls, cornice, ceiling, two opal globe ceiling fixtures and black/brass dome pendant.
+Preserve the original daylight, dappled sun patches, under-cabinet light, warm 2700K interior lighting, exposure and white balance. Only physically necessary local shading/reflections on the recolored wooden joinery may change. Do not dim the whole scene to simulate darker wood.
+One seamless photorealistic photograph of the SAME kitchen with darker walnut joinery, realistic luxury materials and visible grain. No new objects, no text or watermark.

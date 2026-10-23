@@ -1,0 +1,18 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 74-bedroom-matching-kitchen-chocolate-herringbone.png.
+Изменение: уменьшение цифровой зернистости, более чистые поверхности и чёткие детали с сохранением тёмной шоколадной ёлочки.
+
+Use case: precise-object-edit / image quality restoration.
+Improve the TECHNICAL IMAGE QUALITY of this exact supplied bedroom render. The user finds it too grainy. Deliver a noticeably CLEANER, clearer professional architectural photograph of the SAME scene.
+
+QUALITY RESTORATION:
+Remove visible digital noise, luminance/chroma speckles, film grain, dithering, sandy texture, blotchy painterly artifacts and accumulated generative roughness across the image, especially on cream walls, ceiling, shadows, curtains, bed linen and parquet.
+Reconstruct clean high-resolution detail with crisp natural edges, smoothly resolved tonal gradients and believable fine material texture. Aim for a noise-free high-sample architectural visualization / low-ISO professional full-frame interior photograph. Clean, refined and photorealistic, not an oil painting, illustration or oversharpened AI image.
+Recover clear cabinet moulding edges, book spines, picture frames, wood joinery, brass highlights, chair edges and parquet joints. Keep the natural fine wood grain and the bedding/curtain textile patterns, but render them coherently and smoothly rather than as random speckling. Decorative fabric motifs are real details to retain, not noise to erase.
+Use high-quality denoising with detail preservation: no smeared/waxy surfaces, no heavy blur, no halos, no crunchy oversharpening, no artificial added grain, no increased saturation or excessive contrast. Walls and ceiling must appear clean and smooth.
+
+LOCK THE ENTIRE DESIGN AND COMPOSITION:
+Identical camera position, lens, 3:2 landscape crop, room geometry, architecture, furniture positions and object count. Preserve the dark warm CHOCOLATE classic HERRINGBONE parquet including the right-hand passage, exact olive panelling and bookcase color, cream walls, walnut furniture and wardrobe, leather armchair, timber desk and chair, brass desk lamp, three pictures and picture light, all books/plant/decor, curtains and window on the left, ceiling pendant, foreground bed, green patterned throw, cream bedding and existing rug.
+Keep the same dark floor material, herringbone scale and pattern; do not return to pale straight oak planks.
+Keep the existing warm daylight direction, dappled sunlight patches, exposure, white balance, 2700K practical light and realistic contact shadows. Do not alter the interior, restyle it, add/remove objects or redesign the textiles.
+Output one seamless polished, clean, sharply resolved photorealistic image. Preserve all scene content. No captions, text, watermark, collage or side-by-side comparison.

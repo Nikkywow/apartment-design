@@ -1,0 +1,22 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 72-kitchen-bedroom-matched-olive.png.
+Референс только для пола: 54-kitchen-dark-chocolate-clean-detail.png.
+Изменение: возвращена тёмная шоколадная ёлочка; тёмный орех пеналов и тёплый оливковый оттенок фасадов из варианта 72 сохраняются.
+
+Use case: precise-object-edit.
+Edit Image 1 ONLY by replacing its FLOOR with the floor from Image 2.
+
+INPUT ROLES:
+Image 1: 72-kitchen-bedroom-matched-olive.png — the latest approved kitchen and the edit target. Its darker walnut joinery and warm muted olive paint must be preserved exactly.
+Image 2: 54-kitchen-dark-chocolate-clean-detail.png — reference ONLY for the floor. Do not transfer its brighter orange wood cabinetry or cooler forest-green paint.
+
+ONE CHANGE:
+Replace ALL exposed light straight oak plank flooring in Image 1 with the SAME dark chocolate-brown HERRINGBONE timber parquet seen in Image 2. Match Image 2's rich warm brown color, natural grain, moderate plank dimensions, alternating 90-degree rectangular-block herringbone geometry, pattern direction and perspective. It is classic herringbone with square-ended boards, not mitered chevron or straight plank flooring. Fine realistic joints, restrained board variation, matte/satin natural wood finish, refined compact apartment scale. Keep the chocolate tone visibly dark and warm, not black, gray or orange.
+The replacement covers every visible wood-floor patch in the kitchen working aisle, before all base units and tall appliance/coffee towers, around and beneath the dining furniture, and in the lower foreground. Preserve all object silhouettes and the existing rug. Reconstruct contact shadows correctly. Do not put parquet on plinths, cabinet fronts or furniture.
+
+EXACT INVARIANTS FROM IMAGE 1:
+Keep the latest DARK CHOCOLATE WALNUT on the tall refrigerator tower, oven/coffee towers, their panels/cornices, two floating shelves and wooden display interiors. Do not restore Image 2's lighter orange wood.
+Keep the latest WARM MUTED GRAY-OLIVE painted cabinet doors, drawers, frames, sides, plinths and glazed-cabinet frames, matching the bedroom; do not restore Image 2's cooler forest green.
+Preserve the existing cabinet design, appliances, glass and display contents, brass handles, cream embossed floral backsplash, graphite countertop, sink/faucet, all props, round lighter-wood table and chairs, plant, window, cream walls, ceiling and cornices, two opal ceiling globes and black/brass dome pendant.
+Exact same camera, composition, crop, geometry and 3:2 landscape format. Preserve exposure, white balance, daylight direction, dappled sunlight, under-cabinet lighting and 2700K lighting. Only the floor material, layout and its physically necessary local shading/reflections change.
+One seamless photorealistic photograph of the latest kitchen with the older dark herringbone floor, no text, watermark or collage.

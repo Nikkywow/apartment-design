@@ -1,0 +1,38 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 75-bedroom-chocolate-herringbone-clean.png.
+Пин: https://ru.pinterest.com/pin/1051801688050432266/
+Референс дерева: wood-reference-pin-1051801688050432266.jpg.
+Исправления: спокойный текстиль и натуральная кожа; облегчённый стеллаж с визуальными паузами; нейтральнее дневной баланс. Всё видимое натуральное дерево, включая паркет, в гамме пина. Оливковая окраска сохраняется.
+
+Use case: precise-object-edit / reference-guided interior refinement.
+Create ONE corrected, clean photorealistic version of the BEDROOM in Image 1, applying all listed design corrections and the user's new shared wood finish.
+Image 1: 75-bedroom-chocolate-herringbone-clean.png is the bedroom edit target and controlling room geometry/composition.
+Image 2: wood-reference-pin-1051801688050432266.jpg is ONLY a reference for natural wood finish and restrained material rendering, NOT room architecture, all-green walls or furniture design.
+
+SHARED WOOD:
+Use the natural wood in the supplied PIN IMAGE as the shared MATERIAL/COLOR REFERENCE: the front apron and legs of its desk and the natural wood cupboard at image-right. It is a restrained medium smoked walnut/brown-oak tone with neutral taupe-brown undertones, softly warm, desaturated, visible authentic grain and a matte oil finish. Match that actual visual color, not orange/cognac wood, yellow honey oak, red mahogany, nearly black chocolate or gray paint. ALL EXPOSED NATURAL WOOD in the target must belong to this same reference wood finish, including the timber furniture, exposed joinery and the wood floor; realistic lighting and grain may produce subtle value variation. Painted OLIVE surfaces remain painted olive, and brass/metal remains metal. Preserve classic square-ended 90-degree HERRINGBONE floor geometry; change its wood finish to the reference family, not its layout.
+In this bedroom apply it to the writing desk, desk chair timber frame, armchair timber feet, visible wardrobe doors/frames and all visible herringbone parquet, including the passage. Existing metal picture frames remain aged brass. Do not paint the olive bookcase or panelling brown.
+
+CORRECTION 1 — CALM THE COMPETING PATTERNS:
+Retain ONE restrained olive patterned throw on the bed as the sole main fabric motif. Replace the heavily patterned cream bedcover/duvet with plain high-quality ivory cotton/linen with a clean, coherent weave and realistic soft folds. Change heavy drapes to plain oatmeal/ivory linen and the inner sheer curtain to simple translucent plain linen voile, no floral embroidery or glitter. Change the armchair cushion to a plain muted olive or oatmeal cushion. Keep the existing bed rug in place but make it a quiet plain neutral woven wool rug, no elaborate border.
+The cognac leather club armchair keeps its exact size, shape and leather color but becomes authentic PLAIN FULL-GRAIN LEATHER with natural soft creases and subtle patina, no floral/wood-like texture, embossing, embroidery, print or engraved patterns. Keep fabrics tactile, softly resolved, not blank plastic.
+
+CORRECTION 2 — LIGHTEN THE BOOKCASE COMPOSITION:
+Keep the olive bookcase's existing footprint, position, overall height and relation to the desk and passage. Replace its bulky projecting crown with a slender, understated cornice; slim the face-frame and panel mouldings, use restrained lower doors/plinth. Keep practical closed lower storage but reduce its visual heaviness with finer joinery. Open shelves should have around one-third breathing space: small varied groups of real books, a few horizontal stacks, the existing plant and a restrained framed object; remove densely packed uniform leather-bound book rows and excessive decorative clutter. No giant oversized new bookcase, no extra furniture, keep passage free.
+
+CORRECTION 3 — CORRECT THE OVERLY GOLDEN LIGHT:
+Use clear soft neutral daylight through the existing left window with balanced photographic white balance. Cream walls read as warm ivory, not peach/orange; olive reads muted green, wood reads the neutral brown of the pin. Keep the existing 2700K pendant/desk/picture lights as gentle local accents, naturally subtle in daylight. Preserve approximate dappled sunlight direction and realistic contact shadows, but remove the global amber/sepia color cast. Cozy, warm and relaxed without yellow glazing across every surface.
+
+LOCKED GEOMETRY AND CONTENT:
+Preserve the existing camera at the bed looking toward the desk and bookcase, same 3:2 landscape composition/crop, exact room scale, bed position, curtain/window location, cream upper walls and ceiling, existing ceiling cornice, lower olive panelling, three framed pictures and brass picture light, the desk and chair positions, club chair position, brass desk lamp, existing right-hand passage and wardrobe, ceiling pendant, existing bed/rug boundaries. No new window, door, skylight, terrace, room enlargement or spatial rearrangement. Only the specified material, textile, shelving-detail and lighting corrections.
+Premium clean high-sample architectural photograph, natural subtle texture, finely resolved realistic surfaces, clean smooth walls, no film grain/digital noise, painterly artifacts, over-sharpening, noisy fabric, text, watermark or collage.
+
+Уточнение фактур кожи и штор:
+
+Precise LOCAL MATERIAL CLEANUP of this supplied revised bedroom. Keep the entire image, furniture positions, camera, smoked-brown wood, herringbone floor, olive bookcase, balanced daylight, plain ivory bedcover, green throw and book arrangement unchanged.
+
+Correct the LEATHER ARMCHAIR at image-left of the desk: its brown leather still shows large engraved/printed leaf-like squiggles and artificial woodgrain marks. ERASE THESE PATTERNS COMPLETELY from its backrest, seat cushion, front cushion edge, arms and side panels. Re-cover the same chair shape in PLAIN SOLID COGNAC/CHESTNUT LEATHER with a smooth continuous low-sheen surface, extremely fine subtle pores and only a few small realistic creases at bent edges. The large central backrest and seat planes must be clean and unpatterned, never engraved, quilted, embossed, floral, cracked into shapes or woodgrain-like. Keep its warm brown color, original dimensions, rounded club-chair silhouette, discreet brass studs and simple solid cushion.
+
+Make the inner SHEER CURTAIN at the left window plain translucent ivory voile with no embroidered/printed leaves or floral motifs; exterior foliage and natural soft tree shadows may still be visible through it. Heavy curtain remains plain oatmeal linen. Do not add embroidery. Keep the existing natural light and folds.
+
+Change only these two material surfaces, with no new designs or objects and no alterations elsewhere. Clean realistic interior photograph, no film grain, sandy noise, painterly artifacts or blur. Same 3:2 landscape frame, no text or watermark.

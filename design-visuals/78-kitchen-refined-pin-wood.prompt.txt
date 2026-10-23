@@ -1,0 +1,37 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 76-kitchen-bedroom-desk-wood-tone.png.
+Пин: https://ru.pinterest.com/pin/1051801688050432266/
+Референс дерева: wood-reference-pin-1051801688050432266.jpg.
+Исправления: спокойный молочный фартук; два согласованных уровня верха шкафов; читаемая индукционная панель и рабочие розетки. Всё видимое натуральное дерево, включая паркет, в гамме пина. Положение устройств концептуальное, по программе kitchen-spec.json.
+
+Use case: precise-object-edit / reference-guided interior refinement.
+Create ONE corrected, clean photorealistic version of the KITCHEN in Image 1, implementing ALL three listed design corrections and the new shared wood finish.
+Image 1: 76-kitchen-bedroom-desk-wood-tone.png is the kitchen edit target, with controlling architecture, camera and cabinet footprints.
+Image 2: wood-reference-pin-1051801688050432266.jpg is ONLY a reference for natural wood finish and restrained material rendering. Do not import its office furniture, tall green wall panels or architecture.
+
+SHARED WOOD:
+Use the natural wood in the supplied PIN IMAGE as the shared MATERIAL/COLOR REFERENCE: the front apron and legs of its desk and the natural wood cupboard at image-right. It is a restrained medium smoked walnut/brown-oak tone with neutral taupe-brown undertones, softly warm, desaturated, visible authentic grain and a matte oil finish. Match that actual visual color, not orange/cognac wood, yellow honey oak, red mahogany, nearly black chocolate or gray paint. ALL EXPOSED NATURAL WOOD in the target must belong to this same reference wood finish, including the timber furniture, exposed joinery and the wood floor; realistic lighting and grain may produce subtle value variation. Painted OLIVE surfaces remain painted olive, and brass/metal remains metal. Preserve classic square-ended 90-degree HERRINGBONE floor geometry; change its wood finish to the reference family, not its layout.
+Apply to the natural timber fridge/freezer tower at left, oven/microwave and coffee towers at right, all their panels, frames, sides, drawers and cornices, both floating shelves, glazed cupboard timber interiors, coffee niche, round dining table, timber chair frames, and every visible herringbone floor area. Cabinet doors and floor share the same neutral smoked-brown wood family with believable grain variation. The existing warm muted olive painted units and brass handles retain their finish.
+
+CORRECTION 1 — QUIET CREAM BACKSPLASH:
+Completely remove the dense embossed floral/leaf pattern. Replace with calm FLAT MATTE WARM MILK/IVORY CERAMIC TILE, simple moderate-size rectangular tiles with very fine matching grout and only subtle handmade surface variation. No flowers, 3D motifs, busy stone veins, ornate mosaics, shiny patterns or new dark/olive backsplash. Keep its existing boundaries and height. Under-cabinet illumination is even, softly shielded and functional, not a harsh golden stripe exaggerating texture.
+
+CORRECTION 2 — TWO CLEAR CABINET HEIGHTS:
+Resolve the accidental stepped skyline of cabinets in WORLD SPACE while respecting perspective:
+A. All full-height natural-wood towers, the integrated fridge/freezer at left and the oven/microwave/coffee columns on the perpendicular return, terminate at ONE common real-world height around 2750 mm, with slender consistent matching cornices and cream wall/ceiling above.
+B. ALL olive wall cabinets — both glazed display cupboards and the solid cabinet around the cooking zone, including the corner return — terminate at ONE common lower real-world height around 2500 mm and share a single coherent shallow crown profile. Upper cabinet bottoms align at the same worktop clearance. No arbitrary intermediate heights, oversized crown protrusions or towers touching the ceiling.
+These two levels must appear correct under the original camera's perspective, not be forced into one flat horizontal image line across perpendicular walls. Preserve original cabinet widths, hinged door designs, depths, corner logic and glass; do not add new modules.
+The two central open shelves remain a restrained lower feature aligned neatly to adjacent cabinetry, not a third bulky wall-cabinet skyline.
+
+CORRECTION 3 — MAKE THE WORKING KITCHEN LEGIBLE:
+Show a real 600 mm black-glass FOUR-ZONE INDUCTION COOKTOP clearly on the long worktop toward the internal corner, above the planned drawers and under the solid upper cabinet with a CONCEALED HOOD. Give its glass perimeter and four subtle cooking-zone markings enough contrast to read against the honed graphite counter. No gas rings, exposed industrial hood or hob on the dining table.
+Keep the sink separate from the hob and retain a clear preparation counter section between them, corresponding to the existing 600 mm integrated-dishwasher/prep bay. No decorative bowls covering the working hob or prep area.
+Add TWO discreet, realistically sized groups of European round 230V worktop sockets with aged-brass/neutral faceplates on the backsplash above landing/preparation areas, one on either side of the sink/prep composition. Do not put outlets directly over the sink or hob. Add a discreet power point in the existing coffee garage if visible. These are conceptual device locations, no diagram or writing.
+
+LOCKED SPATIAL PROGRAM:
+The existing apartment kitchen-living room is 20.5 m², ceiling 3200 mm. Kitchen remains an L attached to the same solid walls: long wall 3570 mm and perpendicular short return 1720 mm. Preserve full-depth 600 mm base/tall units, visibly shallower upper cupboards, worktop around 900 mm and the current corner continuity.
+On the long wall, from facade toward corner: integrated fridge with separate lower freezer front, landing drawers, sink, integrated dishwasher/prep, induction hob/drawers, blind corner. On the short return: shared corner, separate microwave above oven in one 600 mm tower, narrower 450 mm closable coffee pantry. Preserve the original tower arrangement and coffee opening, do not swap equipment or invent modules.
+Preserve exact camera/crop and 3:2 landscape framing, existing left full-height glazed opening and reveals, room dimensions, round dining table/chairs and their original cropping, cream walls and ceiling cornice, two opal ceiling globes, black/brass dining pendant, plant, graphite countertop and existing brass hardware. No new windows, doorways, island, peninsula or expanded room.
+
+LIGHT AND RENDER:
+Soft natural neutral daylight with a balanced photographic white point so cream stays ivory and the new brown wood avoids orange. Existing 2700K practical lights remain warm local accents. Preserve sunlight direction, dappled floor shadows and believable contact shadows. Premium restrained warm residential mood with clean natural materials. Noise-free photorealistic architectural photograph, subtle authentic wood grain, smooth walls, legible joinery and appliances, no grain, painterly artifacts, over-sharpening, labels, text, watermark or collage.

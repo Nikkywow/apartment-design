@@ -1,0 +1,24 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 71-kitchen-dark-walnut-cabinetry.png.
+Референс оттенка окрашенных фасадов: панели и книжный шкаф на 69-bedroom-reference-oak-floor.png.
+Изменение: зелёные кухонные фасады в тёплом приглушённом серо-оливковом оттенке референса; тёмный орех и светлый дубовый пол сохраняются.
+
+Use case: precise-object-edit.
+Edit ONLY the GREEN PAINT COLOR of the kitchen cabinetry in Image 1 to match the olive-green painted panelling and bookcase in Image 2.
+
+INPUT ROLES:
+Image 1, 71-kitchen-dark-walnut-cabinetry.png: locked edit target.
+Image 2, 69-bedroom-reference-oak-floor.png: COLOR AND PAINT FINISH reference only. Specifically match the olive paint on the bookcase's lower doors, front stiles, side panels and the bedroom's wall panelling. Do not copy any bedroom objects or layout.
+
+ONE LOCAL MATERIAL CHANGE:
+The kitchen's current green is a cooler deep forest green. Repaint ALL existing green painted cabinetry a warmer, quieter, desaturated gray-OLIVE green matching the bedroom reference closely: earthy olive with subtle muted moss/khaki and gray-brown undertones, a little lighter and less blue/emerald than the kitchen's original green. Keep a deep sophisticated medium-dark value; do not make it pale sage, mint, bright yellow-green, mustard, teal, emerald or black.
+Match the actual painted MATERIAL in Image 2, naturally lit under the kitchen's existing light, not the blackness of the bookcase shadows. The new kitchen finish should read as the SAME olive paint family as the bedroom panelling and bookcase. Matte/low-sheen smooth painted joinery.
+Apply to all currently green base doors, drawer fronts and rails, plinths, visible green side panels, the solid upper cabinet and its crown, the green-framed glazed cabinets on both sides and the green corner-return cabinetry. Preserve all existing panel relief, exact door design, proportions, glass and aged-brass hardware.
+
+LOCK EVERYTHING ELSE:
+Retain the latest rich dark CHOCOLATE WALNUT finish on BOTH full-height timber appliance/fridge/coffee towers and the floating timber shelves; do not restore the former orange/light timber or paint the walnut green. Interior wooden shelves/back panels remain dark walnut.
+Keep the approved LIGHT NATURAL OAK floor, straight wide-plank layout, grain, color and all seams exactly as in Image 1.
+Keep the original lighter timber dining table and chairs, cream embossed floral tile backsplash, graphite stone countertop, sink and faucet, appliances and coffee machine, display contents, dishes, books, artwork, decorations and plant untouched.
+Same camera, framing and 3:2 landscape aspect ratio, identical L-shaped cabinetry and architecture, window, walls, ceiling cornice, two opal globe ceiling lamps and black/brass dining pendant.
+Preserve exposure, white balance, sunlight direction and dappled patterns, 2700K practical lighting and under-cabinet light. Do not globally warm, lighten, dim or color-grade the scene to achieve the cabinet match; only locally recolor green paint with physically plausible shading.
+One seamless photorealistic edit of the same kitchen, refined premium natural materials, no added objects, text or watermark.

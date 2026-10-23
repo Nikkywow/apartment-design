@@ -1,0 +1,21 @@
+Режим: встроенный image_gen, редактирование изображения.
+Основа: 54-kitchen-dark-chocolate-clean-detail.png.
+Референс пола: 69-bedroom-reference-oak-floor.png.
+Изменение: одинаковый с вариантом спальни 69 натуральный тёплый дуб, широкие доски с прямой укладкой.
+
+Use case: precise-object-edit.
+Edit Image 1, the kitchen photograph, by replacing ONLY THE FLOOR with the SAME oak floor as in Image 2, the approved bedroom photograph.
+
+INPUT ROLES:
+Image 1: 54-kitchen-dark-chocolate-clean-detail.png — edit target and locked kitchen scene.
+Image 2: 69-bedroom-reference-oak-floor.png — reference ONLY for the floor material, color, plank scale and STRAIGHT laying pattern. Do not transfer bedroom furniture, walls, decorations or composition.
+
+SINGLE REQUIRED REPLACEMENT:
+Completely REMOVE the dark chocolate herringbone parquet in the kitchen, including ALL its zigzag seams and block shapes. Reconstruct the exposed floor from scratch as warm natural medium-light oak WIDE STRAIGHT PLANKS matching the approved bedroom floor closely: honey-beige golden tan with a subtle brown undertone, matte oiled surface, natural visible grain, restrained small knots and modest board-to-board variation. Same oak shade as Image 2, visibly lighter than the original kitchen floor, not bleached, gray, orange or oversaturated.
+LAYING GEOMETRY IS ESSENTIAL: long rectangular boards about 1800–2400 mm long and 180–220 mm wide in simple parallel straight rows with occasional staggered perpendicular butt joints. Run their long edges parallel to the kitchen's long sink cabinet run, correctly projected into the camera perspective. Long board seams form continuous STRAIGHT lines across the floor; absolutely NO herringbone, chevrons, V shapes, diamonds, diagonal interlocking parquet, short block mosaic or surviving traces of the previous pattern.
+Replace every visible wood-floor patch: central working aisle, in front of the base units and appliance towers, under/around the table and chairs, and the lower foreground. Keep existing rug and all furniture boundaries intact. Do not put floor texture on furniture, plinths or other surfaces.
+
+LOCK ALL OTHER DETAILS TO IMAGE 1:
+Exact same camera, framing, 3:2 landscape aspect ratio, L-shaped room geometry, tall window on left, walls, ceiling and cornice. Preserve every timber kitchen tower and its existing walnut color, dark olive base/wall cabinets, glazed display doors and contents, shelves and dishes, aged-brass pulls and knobs, cream embossed floral backsplash tile, graphite stone countertop, sink and black faucet, induction cooktop, the two stacked black appliances at right, coffee niche and machine, all decorations, round timber dining table and curved chairs, plant, two opal globe ceiling fixtures and black/brass dining pendant. No additions or removals, no recoloring or moving anything other than the floor.
+Keep the original warm daylight direction, dappled sunlight, under-cabinet illumination, 2700K practical light, shadows and exposure. Adapt only the floor's shading and contact shadows to the new oak material. Do not brighten the whole photograph.
+The outcome is the SAME kitchen with the approved bedroom's oak floor, believable architectural photography, realistic texture and refined high detail. One seamless photorealistic edited photograph, no labels, dimensions, watermark or collage.
