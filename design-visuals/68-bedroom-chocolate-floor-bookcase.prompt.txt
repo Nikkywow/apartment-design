@@ -1,0 +1,21 @@
+Tool: built-in imagegen.
+Edit target: 64-bedroom-armchair-by-window.png.
+Floor reference: 67-bedroom-bed-view-floor-left-wall.png.
+Book cabinet reference: 63-pinterest-study-reference.jpg.
+
+Use case: precise-object-edit.
+INPUT 1 is the EXACT EDIT TARGET: bedroom variant 64, showing the cognac leather armchair beside the window, walnut desk in the center, and walnut chest of drawers at right.
+INPUT 2 is ONLY the FLOOR COLOR / WOOD FINISH reference, showing the current opposite view toward the bed.
+INPUT 3 is ONLY the BOOKCASE / BOOK CABINET design reference supplied by the user.
+
+Make TWO CHANGES to INPUT 1:
+
+1. FLOOR MATCH. Change every exposed area of parquet, including the floor visible through the open passage into the dressing area, to match the rich DARK CHOCOLATE BROWN herringbone floor from INPUT 2. The target currently has too much copper/orange in the floor; use the deeper, calmer chocolate brown from input 2, with restrained fine timber grain and matte finish. Preserve the existing herringbone pattern, board size, joint layout, floor perspective and all sunlight patches, leaf shadows and furniture contact shadows. Do not globally darken the image or change the lighting. Do not change the wood tone of the desk, chair, or other furniture.
+
+2. REPLACE THE CHEST WITH A BOOK CABINET INSPIRED BY INPUT 3. Remove the walnut three-drawer chest on the RIGHT of the central desk and replace it in precisely that footprint with a refined tall, narrow English-style BOOKCASE CABINET / BOOK HUTCH. About 80–90 cm wide, lower depth 40–45 cm, overall height about 230–240 cm, proportionate to the 320 cm room height. It must fit entirely on the front wall, to the right of the desk, without widening the room or obstructing the adjacent full-height passage.
+Closely follow the dark OLIVE PAINTED LIBRARY CABINET in INPUT 3: matte deep muted olive body harmonizing with the green wall paneling, restrained molded crown, slim side pilasters, 3–4 open upper shelf compartments filled with a curated mix of books, and two small paneled closed doors below with aged-brass knobs. Realistic books in muted brown, forest green, cream and burgundy cloth/leather bindings, some upright and a few horizontal stacks, varied plausible heights; books are the main content. One small brass or ceramic object may sit among them. No dishes, wine glasses, bar equipment or huge TV. No glass doors required; the supplied reference has open bookshelves. Keep the scale compact, not a wall-to-wall library or bulky wardrobe.
+Remove the vase and bowl that previously sat on the chest. The new cabinet naturally occupies the wall area behind it: remove ONLY the two framed prints and the one picture light immediately above the old chest if they conflict with the taller cabinet. Keep all other framed art and picture lights in their existing positions; do not overlap artwork with the cabinet or glue pictures onto its doors.
+
+STRICT PRESERVATION:
+Same camera, crop, room dimensions and perspective. Same cognac leather armchair and cushion at IMAGE LEFT by window. Same contemporary walnut writing desk and desk chair at CENTER, same brass desk lamp and notebook. Same bed foreground and ivory bedding with olive throw, rug, window and drapes, cream upper walls, olive lower panels, ceiling cornice, pleated fabric ceiling light, sunny warm mood and natural shadows. Same full-height doorless opening at far right and same compact dressing room with walnut doors beyond. Do not relocate any furniture except replacing the chest in place. Do not add new openings, stools, chairs, mirrors or desks. Do not lighten the floor to oak or recolor the whole room.
+Highest clean photorealistic detail, fine wood/leather/paper textures, straight cabinet lines, no noise or painterly artifacts. Single horizontal 3:2 image, no text, watermark or labels.

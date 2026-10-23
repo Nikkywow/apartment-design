@@ -1,0 +1,11 @@
+{
+  "base_geometry": "bedroom-61-geometry.json",
+  "status": "concept; dimensions of proposed furniture are assumptions",
+  "opening": {"location": "plan-top at plan-left corner", "width_m": 1.0, "width_status": "working reading, unchanged", "height": "full ceiling height per user request, about 3.20 m"},
+  "dressing_area": {"change": "compact shallow glimpse; previous long wardrobe row rejected", "exact_new_dimensions": null},
+  "remove": ["console", "oval mirror", "upholstered stool"],
+  "desk": {"wall": "plan-left; image-left near facade", "width_m": 1.25, "depth_m": 0.60, "height_m": 0.75, "plan_y_span_m": [1.80, 3.05], "material": "solid timber", "chair": "tucked under desk"},
+  "chest": {"wall": "plan-left; image-right near passage", "width_m": 0.90, "depth_m": 0.45, "height_m": 0.85, "plan_y_span_m": [0.35, 1.25]},
+  "clearance_to_bed_foot_m": {"desk": 0.94, "chest": 1.09},
+  "desk_use": "0.94 m is total desk-front to bed-foot distance before chair occupancy; not a free passage behind an occupied chair. Main access route remains to the right."
+}

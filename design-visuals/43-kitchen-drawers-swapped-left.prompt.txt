@@ -1,0 +1,12 @@
+Tool: built-in imagegen.
+Source: 42-kitchen-equal-hinged-doors-single-sink.png
+Final: 43-kitchen-drawers-swapped-left.png
+
+Use case: precise-object-edit.
+Edit target: the supplied kitchen render.
+Primary request: Swap the narrow three-drawer base-cabinet stack with the single hinged base-cabinet door IMMEDIATELY TO ITS LEFT. Make only this one local swap.
+
+In this 1536x1024 image, the lower dark green straight run currently contains, from left to right: three hinged doors (the third is directly under the sink), a fourth hinged door at approximately x=841–977, and a three-drawer stack at approximately x=977–1120. Swap ONLY the last two modules: the three-drawer stack must now occupy x=841–977, and the single hinged door must occupy x=977–1120 immediately beside the inside corner. The final left-to-right order is THREE hinged doors, ONE stack of THREE drawers, then ONE hinged door. Keep the widths of the existing module slots and the aligned cabinet tops and bottoms. Use the same dark olive green recessed panels. The moved drawers retain their three brass cup handles, one per drawer, centered on each drawer. The moved hinged door retains one small round brass knob near its upper edge, matching the other hinged doors.
+
+Strict invariants: The sink and faucet stay EXACTLY in their present positions, centered over the third hinged door. Keep all other lower cabinet doors, corner cabinet, cabinet seams outside these last two modules, black countertop, cooktop, backsplash, upper cupboards, warm walnut tall cabinets, built-in appliances, shelves, dishes, table, chairs, window, floor, camera angle, framing, lighting, material textures and colors unchanged. No extra doors, no extra drawers, no duplicated handles, no labels or text. Seamless photorealistic local edit.
+

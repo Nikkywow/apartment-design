@@ -1,0 +1,14 @@
+Tool: built-in imagegen.
+Source: 44-kitchen-milk-tile-enhanced.png
+Final: 45-kitchen-warm-cream-tile.png
+
+Use case: precise-object-edit.
+Edit target: the supplied kitchen image.
+Primary request: Make ONLY the FLOOR TILE COLOR noticeably warmer.
+
+Replace the current pale milky ivory floor-tile tone with a warm creamy beige, the shade of baked milk / rich warm vanilla cream / light sand-colored limestone. It must be visibly warmer and a little richer than the reference, with a soft golden-beige undertone rather than grey or cold white. Keep it elegant and light, harmonizing with the warm walnut cabinets and dark olive-green kitchen. A warm cream-beige, not orange, pink, terracotta or strong yellow.
+
+Preserve the existing matte porcelain tile finish, fine restrained natural texture, square tile size, precise grid, thin matching warm beige grout, floor perspective, and every tile joint in its current location. Keep the sunlight, furniture shadows, and natural differences between lit and shaded floor areas realistic. Change the floor material's intrinsic color rather than warming the whole image.
+
+Strict invariants: EVERYTHING except the floor-tile color stays unchanged. Preserve the exact original viewpoint and framing, lighting, exposure, walls, ceiling, backsplash, furniture, table, chairs, windows, green and walnut cabinetry, appliances, countertop, sink and faucet, knobs and handles, objects and textures. Preserve the lower green cabinet sequence: three hinged doors, a three-drawer stack, then a hinged door beside the corner. Keep the sink centered over the third door. Preserve the clear high-quality photorealistic detail and original 3:2 aspect ratio. No new objects, text or watermarks.
+

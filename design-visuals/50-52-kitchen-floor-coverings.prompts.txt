@@ -1,0 +1,49 @@
+Tool: built-in imagegen. Three independent floor material edits from the same image.
+Source: 47-kitchen-floor-muted-terracotta.png (user attachment exec-01ce6a7e-0306-414f-b94c-e3429134208e.png)
+
+1. Дубовая ёлочка
+Final: 50-kitchen-floor-oak-herringbone.png
+
+Use case: precise-object-edit.
+Input image: edit target, the supplied kitchen image.
+Primary request: visualize a DIFFERENT FLOOR COVERING in this exact kitchen. Replace the entire existing terracotta stone floor, including the visible areas under the table and chairs, right up to all existing kitchen cabinet plinths. Do not retain the old floor's tile pattern unless explicitly requested below.
+
+NEW FLOOR COVERING:
+Natural OAK PARQUET in a CLASSIC 90-degree HERRINGBONE pattern. Elegant medium-light natural honey-beige oak, with quiet subtle grain, restrained small knots, a matte oiled finish and clean precise joints. Small-to-medium parquet blocks around 10 x 50 cm, consistent realistic scale. A recognizable alternating zigzag herringbone layout, not diagonal straight planks and not chevron points. Keep the oak lighter and less orange than the existing walnut cabinets, with soft warm neutral toasted-beige coloring. Subtle natural variation among the wood blocks, smooth and refined, no rustic distressing, no gloss. It must read unmistakably as real timber parquet and completely replace all the old stone tiles and grout lines.
+
+Integrate the replacement floor with the original camera perspective, correct believable material scale, existing floor level, natural window sunlight and all furniture and foliage shadows. Preserve the exact warm lighting and original exposure. This is a local floor material edit, not a global color filter.
+
+Strict invariants: preserve EVERYTHING ABOVE THE FLOOR exactly: the camera angle, original 3:2 framing, architecture, cabinet arrangement, dark olive green fronts, walnut tall cabinetry and wood grain, brass hardware, dark countertops, sink, faucet, cooktop, built-in ovens, backsplash, ceiling, walls, lights, shelves, dishes, plants, table and chairs. The lower green straight run remains THREE hinged doors, ONE stack of THREE drawers, then ONE hinged door beside the corner; the sink remains centered over the third hinged door. No rugs, extra decor, text or watermark. Keep clean, sharp, high-quality photorealistic detail.
+
+====================
+
+2. Тёплый микроцемент
+Final: 51-kitchen-floor-warm-microcement.png
+
+Use case: precise-object-edit.
+Input image: edit target, the supplied kitchen image.
+Primary request: visualize a DIFFERENT FLOOR COVERING in this exact kitchen. Replace the entire existing terracotta stone floor, including the visible areas under the table and chairs, right up to all existing kitchen cabinet plinths. Do not retain the old floor's tile pattern unless explicitly requested below.
+
+NEW FLOOR COVERING:
+A completely SEAMLESS WARM MICRO-CEMENT floor. Light-to-medium sandy greige / warm oatmeal taupe, a restrained warm neutral shade that lets the olive and walnut cabinets stand out. A continuous matte mineral surface with very gentle, believable hand-troweled tonal clouds and fine texture. Refined and smooth, not rough concrete or heavily mottled plaster. Absolutely NO TILE JOINTS, grout, parquet patterns, stone slabs, or seams anywhere. Keep it warmly beige-taupe rather than cold blue-grey. The continuous floor should look calm, soft and tactile.
+
+Integrate the replacement floor with the original camera perspective, correct believable material scale, existing floor level, natural window sunlight and all furniture and foliage shadows. Preserve the exact warm lighting and original exposure. This is a local floor material edit, not a global color filter.
+
+Strict invariants: preserve EVERYTHING ABOVE THE FLOOR exactly: the camera angle, original 3:2 framing, architecture, cabinet arrangement, dark olive green fronts, walnut tall cabinetry and wood grain, brass hardware, dark countertops, sink, faucet, cooktop, built-in ovens, backsplash, ceiling, walls, lights, shelves, dishes, plants, table and chairs. The lower green straight run remains THREE hinged doors, ONE stack of THREE drawers, then ONE hinged door beside the corner; the sink remains centered over the third hinged door. No rugs, extra decor, text or watermark. Keep clean, sharp, high-quality photorealistic detail.
+
+====================
+
+3. Светлое терраццо
+Final: 52-kitchen-floor-cream-terrazzo.png
+
+Use case: precise-object-edit.
+Input image: edit target, the supplied kitchen image.
+Primary request: visualize a DIFFERENT FLOOR COVERING in this exact kitchen. Replace the entire existing terracotta stone floor, including the visible areas under the table and chairs, right up to all existing kitchen cabinet plinths. Do not retain the old floor's tile pattern unless explicitly requested below.
+
+NEW FLOOR COVERING:
+Elegant warm CREAM TERRAZZO with a fine stone aggregate. A light warm ivory/cream base containing restrained small irregular natural stone chips about 3-8 mm, in sand beige, muted terracotta, warm pale brown and occasional tiny charcoal flecks. Quiet fine-grained terrazzo with clearly visible yet subtle delicate chips at a believable scale, not large graphic fragments or a multicolor confetti pattern. A softly honed matte finish, no mirror shine. A continuous poured terrazzo floor, with no old rectangular tile grid or grout lines. It must read as warm refined fine-aggregate terrazzo, clearly different from veined limestone and solid microcement.
+
+Integrate the replacement floor with the original camera perspective, correct believable material scale, existing floor level, natural window sunlight and all furniture and foliage shadows. Preserve the exact warm lighting and original exposure. This is a local floor material edit, not a global color filter.
+
+Strict invariants: preserve EVERYTHING ABOVE THE FLOOR exactly: the camera angle, original 3:2 framing, architecture, cabinet arrangement, dark olive green fronts, walnut tall cabinetry and wood grain, brass hardware, dark countertops, sink, faucet, cooktop, built-in ovens, backsplash, ceiling, walls, lights, shelves, dishes, plants, table and chairs. The lower green straight run remains THREE hinged doors, ONE stack of THREE drawers, then ONE hinged door beside the corner; the sink remains centered over the third hinged door. No rugs, extra decor, text or watermark. Keep clean, sharp, high-quality photorealistic detail.
+

@@ -1,0 +1,18 @@
+Tool: built-in imagegen.
+Edit target: 66-bedroom-variant64-bed-view.png.
+Floor reference: 55-bedroom-walnut-olive-english.png (the user's preceding attached photo).
+Retain variant-64 pleated ceiling lamp already present in target; remove spurious left return from visualization.
+
+Use case: precise-object-edit.
+INPUT 1 is the exact edit target: the current view toward the olive bed, with pleated fabric ceiling lamp, pleated bedside sconces and smooth upper walls.
+INPUT 2 is the user's previous bedroom image, supplied ONLY as a FLOOR COLOR AND FINISH reference.
+Make exactly these two changes to INPUT 1:
+
+1. MATCH THE WOOD FLOOR TO INPUT 2. All exposed parquet should match the rich, deep DARK CHOCOLATE BROWN herringbone wood in input 2, with its calm restrained natural grain and matte finish. Reduce the orange/copper cast in the exposed foreground-left floor of input 1, using the deeper chocolate brown from input 2. Keep realistic warm sunlight patches and existing shadows: this is a floor material change, not a lighting/exposure change. Preserve existing herringbone plank sizes, direction, joints and perspective. Do not use pale natural oak.
+
+2. REMOVE THE ERRONEOUS LITTLE PROJECTING SIDE WALL / RETURN AT THE EXTREME IMAGE-LEFT. In input 1 a narrow perpendicular wall slab appears along the left border, with a vertical corner around x=40 pixels and olive panels that turn toward the camera. Eliminate this protruding return completely. The actual HEADBOARD WALL behind the left nightstand should continue as ONE FLAT PLANE uninterrupted to and beyond the left image edge, as in input 2's wall geometry. Seamlessly extend the smooth cream upper wall and the olive lower wainscoting horizontally into the vacated strip, maintaining the same perspective. Remove the little wall corner, ledge, perpendicular olive panel, baseboard return and its projecting footprint. Do NOT remove the main wall behind the bed, do NOT create a door, arch, opening, niche or a large new room on the left. Do not widen or crop the image to hide the issue. The left bedside table and wall light remain precisely where they are.
+
+PRESERVE the ceiling fixture from INPUT 1: the warm ivory PLEATED FABRIC DRUM shade with brass fittings, as chosen in variant 64. Do NOT restore the round globe ceiling light from input 2. Preserve input 1's pleated bedside shades as well.
+Keep EVERYTHING ELSE exactly like input 1: camera, framing, proportions, bed position and olive upholstered headboard, ivory bedding, thick knitted olive throw and all cushions, soft oatmeal rug, walnut nightstands, books/cup/vases, landscape painting, smooth cream upper wall without rectangular molding frames, olive lower panels, curtains and window at right, ceiling cornice, light direction, brightness and colors. Do not copy the older bedding, rug, round sconces or upper wall frames from input 2.
+
+Single horizontal 3:2 photorealistic image, clean fine detail, no granular noise, painterly artifacts, text, watermark or labels.

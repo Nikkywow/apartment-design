@@ -1,0 +1,23 @@
+Tool: built-in imagegen.
+Source: 53-kitchen-dark-chocolate-herringbone.png (user attachment exec-534da4b4-c557-4a80-881a-1e011cc01425.png)
+Final: 54-kitchen-dark-chocolate-clean-detail.png
+
+Use case: precise-object-edit.
+Asset type: restoration and quality enhancement of an existing kitchen interior visualization.
+Input image: the supplied kitchen render is the exact edit target.
+
+Primary request: REMOVE THE VISIBLE GRAININESS AND RESTORE CLEAR, CLEAN PHOTOREALISTIC DETAIL throughout the image. Produce a visibly cleaner, smoother, sharper professional architectural image of the SAME scene. This is image restoration, not a redesign.
+
+The current render has accumulated speckled, mottled, smeared, wavy and painterly artifacts from repeated edits, particularly on the wooden tall cabinets, tabletop, chair frames, backsplash, and dark parquet. Clean these artifacts and reconstruct plausible fine material detail:
+- Smooth, noise-free matte olive painted cabinet surfaces with crisp straight panel edges.
+- Natural, fine, continuous walnut grain on the tall cabinets, calmly resolved rather than coarse, granular, rippled, excessively knotted or embossed.
+- A refined smooth wooden tabletop with believable subtle grain, clean curved edge and continuous highlights, removing the melted ripples and rough mottling.
+- Clear, precisely defined brass handles, knobs, tap, glass cabinet frames, cups and appliance edges.
+- A refined DARK CHOCOLATE BROWN herringbone timber floor with clean block joints and restrained natural wood grain. Retain the exact dark chocolate color, existing herringbone layout and matte finish.
+- Clean cream backsplash tiles, subtle original relief pattern, sharp believable grout, no crystalline or wrinkled noise.
+- Smooth plaster wall and ceiling tones and clean shadow gradients.
+
+Rendering: low-noise / low-ISO professional architectural photography quality, optically clear details, natural soft highlights, no coarse grain, no digital speckling, no oversharpened outlines, no halos, no waxy blur. Do not add texture to simulate sharpness. Preserve natural material realism while greatly reducing distracting high-frequency roughness. Highest available native detail and resolution; preferably 3072 x 2048 if supported. Keep the identical 3:2 composition.
+
+STRICT PRESERVATION: Keep exactly the same kitchen, dimensions, camera angle, cropping, cabinet proportions, colors, brightness, sunlight direction and warm evening atmosphere. Preserve the warm walnut tall units, deep olive green fronts, brass hardware, black countertop, appliances, shelves, dishes, window, plants, table, chairs, painting, lighting positions and all object locations. Preserve the lower green cabinet order: three single hinged doors, one three-drawer stack, then a single hinged door beside the corner. Keep the black sink centered above the third hinged door, with faucet in its current place. Do not lighten the dark chocolate floor. Preserve the light/shadow patches on the floor and table. No new objects, no removed furniture, no text, no watermark.
+

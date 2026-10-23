@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-10-14",
+  "units": "m",
+  "source": {
+    "image": "../updated-measured-plan-rotated.jpeg",
+    "source_type": "photograph_of_annotated_plan",
+    "pixel_size": [1280, 960],
+    "limitations": [
+      "perspective distortion",
+      "handwritten dimensions overlap printed plan",
+      "some dimension endpoints are ambiguous",
+      "not suitable as construction survey"
+    ]
+  },
+  "coordinate_system": {
+    "orientation": "as displayed in updated-measured-plan-rotated.jpeg",
+    "x_axis": "plan-left to plan-right",
+    "y_axis": "plan-top to plan-bottom",
+    "origin": "plan-top-left",
+    "camera_rule": "For a camera looking from plan-top toward plan-bottom, plan-left appears on image-right and plan-right appears on image-left. For an oblique camera, verify this relation explicitly before rendering."
+  },
+  "confidence_levels": {
+    "high": "value is clearly legible and geometrically consistent",
+    "medium": "value is legible or strongly supported by area/adjacent dimensions",
+    "low": "handwriting or endpoints are ambiguous; do not use for fabrication"
+  },
+  "global": {
+    "apartment_area_m2": {
+      "value": 52.0,
+      "confidence": "high",
+      "source": "printed label"
+    },
+    "ceiling_height_m": {
+      "value": 3.2,
+      "confidence": "high",
+      "source": "confirmed by user",
+      "needs_confirmation": "clarify slab-to-slab versus finished height"
+    },
+    "main_facade_chain_m": {
+      "value": 9.59,
+      "formula": "R05 width 5.90 + R06 width 3.69",
+      "confidence": "medium"
+    }
+  },
+  "spaces": [
+    {
+      "id": "R01",
+      "name": "guest_wc_laundry",
+      "name_ru": "Гостевой санузел / постирочная",
+      "area_m2": 3.1,
+      "plan_position": "top-left",
+      "working_dimensions_m": {"width": 1.98, "depth": 1.55},
+      "shape": "irregular_with_utility_niche",
+      "confidence": "medium",
+      "adjacent_spaces": ["R02", "R05"],
+      "design_constraints": ["washing machine in existing niche", "closed cabinet above washer", "wet zone remains in place"]
+    },
+    {
+      "id": "R02",
+      "name": "entrance_hall",
+      "name_ru": "Прихожая",
+      "area_m2": 5.0,
+      "plan_position": "top-left-center",
+      "working_dimensions_m": {"main_width": 2.17, "main_depth": 2.02},
+      "shape": "irregular_with_entry_niche",
+      "confidence": "medium",
+      "adjacent_spaces": ["R01", "R03", "R05", "X00"],
+      "notes": ["main rectangle dimensions do not include every niche", "entry door is on plan-top edge"]
+    },
+    {
+      "id": "R03",
+      "name": "corridor",
+      "name_ru": "Коридор",
+      "area_m2": 5.1,
+      "plan_position": "top-center",
+      "working_dimensions_m": {"width": 2.685, "depth": 1.89},
+      "shape": "near_rectangular_with_door_recesses",
+      "confidence": "high",
+      "adjacent_spaces": ["R02", "R04", "R05", "R06"]
+    },
+    {
+      "id": "R04",
+      "name": "main_bathroom",
+      "name_ru": "Основная ванная",
+      "area_m2": 5.0,
+      "plan_position": "top-right",
+      "working_dimensions_m": {"width": 2.65, "depth": 1.88},
+      "shape": "near_rectangular_with_door_recess",
+      "confidence": "medium",
+      "adjacent_spaces": ["R03", "R06"],
+      "design_constraints": ["wall-hung toilet", "hygienic shower", "large built-in shower", "two outlets near vanity"]
+    },
+    {
+      "id": "R05",
+      "name": "kitchen_living",
+      "name_ru": "Кухня-гостиная",
+      "area_m2": 20.5,
+      "plan_position": "bottom-left",
+      "working_dimensions_m": {"max_width": 5.9, "max_depth": 3.57},
+      "shape": "irregular_due_to_top_recesses",
+      "confidence": "high",
+      "adjacent_spaces": ["R01", "R02", "R03", "R06", "X01"],
+      "design_constraints": ["kitchen run on plan-left wall", "two facade openings on plan-bottom", "do not mirror camera orientation"]
+    },
+    {
+      "id": "R06",
+      "name": "bedroom",
+      "name_ru": "Спальня",
+      "area_m2": 13.3,
+      "plan_position": "bottom-right",
+      "working_dimensions_m": {"width": 3.69, "depth": 3.56},
+      "raw_right_wall_annotation_m": 3.425,
+      "shape": "near_rectangular",
+      "confidence": "medium",
+      "adjacent_spaces": ["R03", "R04", "R05", "X01"],
+      "design_constraints": ["one facade opening on plan-bottom", "bed 1800 mm", "bedside tables approximately 600 mm"]
+    },
+    {
+      "id": "X00",
+      "name": "common_entry_side",
+      "name_ru": "Внешняя сторона входа / общий коридор",
+      "type": "external_or_common",
+      "confidence": "medium"
+    },
+    {
+      "id": "X01",
+      "name": "facade_side",
+      "name_ru": "Фасадная сторона с остеклением",
+      "type": "external",
+      "confidence": "high"
+    },
+    {
+      "id": "X02",
+      "name": "unidentified_2_9_area",
+      "name_ru": "Неидентифицированная зона с печатной площадью 2,9 м²",
+      "area_m2": 2.9,
+      "type": "unknown_external_or_auxiliary",
+      "confidence": "low",
+      "notes": ["printed outside the main apartment contour at plan-top-left", "requires user or developer plan confirmation"]
+    }
+  ],
+  "walls": [
+    {
+      "id": "W_R05_LEFT_KITCHEN",
+      "space": "R05",
+      "side": "plan-left",
+      "length_m": 3.57,
+      "confidence": "high",
+      "role": "long leg of L-shaped kitchen"
+    },
+    {
+      "id": "W_R05_TOP_KITCHEN_RETURN",
+      "space": "R05",
+      "side": "plan-top-left",
+      "length_m": 1.72,
+      "confidence": "medium",
+      "role": "short return leg and wall behind L-shaped kitchen",
+      "shared_with": "R01"
+    },
+    {
+      "id": "W_R05_BOTTOM_FACADE",
+      "space": "R05",
+      "side": "plan-bottom",
+      "length_m": 5.9,
+      "confidence": "high",
+      "contains_openings": ["O_R05_F1", "O_R05_F2"]
+    },
+    {
+      "id": "W_R05_R06_PARTITION",
+      "between": ["R05", "R06"],
+      "length_m": 3.56,
+      "thickness_m": 0.125,
+      "confidence": "medium",
+      "role": "living-room TV wall / bedroom partition"
+    },
+    {
+      "id": "W_R06_BOTTOM_FACADE",
+      "space": "R06",
+      "side": "plan-bottom",
+      "length_m": 3.69,
+      "confidence": "high",
+      "contains_openings": ["O_R06_F1"]
+    },
+    {
+      "id": "W_R06_RIGHT",
+      "space": "R06",
+      "side": "plan-right",
+      "length_m": 3.425,
+      "confidence": "low",
+      "notes": ["raw handwritten value", "conflicts with 3.56 m working depth; likely references a partial or finish-to-finish segment"]
+    },
+    {
+      "id": "W_R03_TOP",
+      "space": "R03",
+      "side": "plan-top",
+      "length_m": 2.685,
+      "confidence": "high"
+    },
+    {
+      "id": "W_R04_TOP",
+      "space": "R04",
+      "side": "plan-top",
+      "length_m": 2.65,
+      "confidence": "medium"
+    },
+    {
+      "id": "W_R01_LEFT",
+      "space": "R01",
+      "side": "plan-left",
+      "length_m": 1.55,
+      "confidence": "high"
+    }
+  ],
+  "openings": [
+    {
+      "id": "D_ENTRY",
+      "type": "door",
+      "connects": ["X00", "R02"],
+      "width_m": 1.06,
+      "confidence": "medium",
+      "location": "R02 plan-top edge"
+    },
+    {
+      "id": "D_R01_R02",
+      "type": "door",
+      "connects": ["R01", "R02"],
+      "width_m": 0.8,
+      "confidence": "low"
+    },
+    {
+      "id": "D_R02_R05",
+      "type": "door_or_opening",
+      "connects": ["R02", "R05"],
+      "width_m": 0.8,
+      "confidence": "low"
+    },
+    {
+      "id": "D_R03_R04",
+      "type": "door",
+      "connects": ["R03", "R04"],
+      "width_m": 0.89,
+      "confidence": "medium"
+    },
+    {
+      "id": "D_R03_R06",
+      "type": "door",
+      "connects": ["R03", "R06"],
+      "width_m": 0.89,
+      "confidence": "medium"
+    },
+    {
+      "id": "O_R05_F1",
+      "type": "glazed_facade_opening",
+      "space": "R05",
+      "side": "plan-bottom",
+      "order_from_plan_left": 1,
+      "width_m": 1.49,
+      "confidence": "medium",
+      "descriptor": "narrow opening nearer kitchen side"
+    },
+    {
+      "id": "O_R05_F2",
+      "type": "glazed_facade_opening",
+      "space": "R05",
+      "side": "plan-bottom",
+      "order_from_plan_left": 2,
+      "width_m": 2.19,
+      "confidence": "medium",
+      "descriptor": "wide opening nearer bedroom partition"
+    },
+    {
+      "id": "O_R06_F1",
+      "type": "glazed_facade_opening",
+      "space": "R06",
+      "side": "plan-bottom",
+      "width_m": 2.25,
+      "confidence": "high",
+      "approx_side_piers_m": {"plan_left": 0.71, "plan_right": 0.73},
+      "pier_confidence": "low"
+    }
+  ],
+  "measurement_register": [
+    {"id": "M001", "value_m": 5.9, "applies_to": "R05 overall plan-bottom width", "confidence": "high"},
+    {"id": "M002", "value_m": 3.57, "applies_to": "R05 plan-left depth / kitchen wall", "confidence": "high"},
+    {"id": "M003", "value_m": 3.69, "applies_to": "R06 internal width", "confidence": "high"},
+    {"id": "M004", "value_m": 3.56, "applies_to": "R06 working depth and R05/R06 partition", "confidence": "medium"},
+    {"id": "M005", "value_m": 3.425, "applies_to": "R06 raw plan-right vertical annotation", "confidence": "low"},
+    {"id": "M006", "value_m": 2.685, "applies_to": "R03 top wall / width", "confidence": "high"},
+    {"id": "M007", "value_m": 1.89, "applies_to": "R03 working depth", "confidence": "medium"},
+    {"id": "M008", "value_m": 2.65, "applies_to": "R04 working width", "confidence": "medium"},
+    {"id": "M009", "value_m": 1.88, "applies_to": "R04 depth", "confidence": "high"},
+    {"id": "M010", "value_m": 1.98, "applies_to": "R01 working width", "confidence": "medium"},
+    {"id": "M011", "value_m": 1.55, "applies_to": "R01 depth", "confidence": "high"},
+    {"id": "M012", "value_m": 2.17, "applies_to": "R02 main width", "confidence": "medium"},
+    {"id": "M013", "value_m": 2.02, "applies_to": "R02 main depth", "confidence": "medium"},
+    {"id": "M014", "value_m": 1.335, "applies_to": "R02/R01 entry-side vertical wall fragment", "confidence": "low"},
+    {"id": "M015", "value_m": 1.415, "applies_to": "R02-to-R05 lower horizontal segment/opening chain", "confidence": "low"},
+    {"id": "M016", "value_m": 1.78, "applies_to": "R03 left vertical wall fragment", "confidence": "low"},
+    {"id": "M017", "value_m": 1.87, "applies_to": "R06 top wall clear segment right of entry / R04 lower segment", "confidence": "medium"},
+    {"id": "M018", "value_m": 1.0, "applies_to": "R04/R06 top-left horizontal segment", "confidence": "medium"},
+    {"id": "M019", "value_m": 0.89, "applies_to": "R03-R04 and/or R03-R06 door clear width", "confidence": "medium"},
+    {"id": "M020", "value_m": 0.8, "applies_to": "small internal door/opening and R04 right-side fragment", "confidence": "low"},
+    {"id": "M021", "value_m": 0.75, "applies_to": "short internal wall segment near corridor/bath doors", "confidence": "low"},
+    {"id": "M022", "value_m": 0.69, "applies_to": "internal opening/wall segment near R03 bottom edge", "confidence": "low"},
+    {"id": "M023", "value_m": 0.67, "applies_to": "short partition segment near R03/R04 top-left", "confidence": "low"},
+    {"id": "M024", "value_m": 0.65, "applies_to": "short partition segment near R03/R04 top-left", "confidence": "low"},
+    {"id": "M025", "value_m": 0.63, "applies_to": "short wall segment at R02/R03 junction", "confidence": "low"},
+    {"id": "M026", "value_m": 0.44, "applies_to": "short wall segment near corridor/bedroom junction", "confidence": "low"},
+    {"id": "M027", "value_m": 0.23, "applies_to": "short internal wall/pier near R01/R02", "confidence": "low"},
+    {"id": "M028", "value_m": 0.14, "applies_to": "small facade/finish offset", "confidence": "low"},
+    {"id": "M029", "value_m": 0.125, "applies_to": "typical internal partition thickness annotations", "confidence": "medium"},
+    {"id": "M030", "value_m": 1.06, "applies_to": "main entrance door opening", "confidence": "medium"},
+    {"id": "M031", "value_m": 1.49, "applies_to": "R05 narrow facade opening", "confidence": "medium"},
+    {"id": "M032", "value_m": 2.19, "applies_to": "R05 wide facade opening", "confidence": "medium"},
+    {"id": "M033", "value_m": 2.25, "applies_to": "R06 facade opening", "confidence": "high"},
+    {"id": "M034", "value_m": 0.71, "applies_to": "R06 facade plan-left pier", "confidence": "low"},
+    {"id": "M035", "value_m": 0.73, "applies_to": "R06 facade plan-right pier", "confidence": "low"},
+    {"id": "M036", "value_m": 1.9, "applies_to": "plan-top-left external horizontal fragment", "confidence": "low"},
+    {"id": "M037", "value_m": 1.72, "applies_to": "R05 top-left wall behind kitchen / short leg of L-shaped kitchen", "confidence": "medium"}
+  ],
+  "topology": {
+    "direct_connections": [
+      {"through": "D_ENTRY", "from": "X00", "to": "R02"},
+      {"through": "D_R01_R02", "from": "R02", "to": "R01"},
+      {"through": "open_or_door_connection", "from": "R02", "to": "R03"},
+      {"through": "D_R02_R05", "from": "R02", "to": "R05"},
+      {"through": "D_R03_R04", "from": "R03", "to": "R04"},
+      {"through": "D_R03_R06", "from": "R03", "to": "R06"},
+      {"through": "O_R05_F1", "from": "R05", "to": "X01"},
+      {"through": "O_R05_F2", "from": "R05", "to": "X01"},
+      {"through": "O_R06_F1", "from": "R06", "to": "X01"}
+    ],
+    "shared_boundaries": [
+      {"spaces": ["R01", "R05"], "type": "partition"},
+      {"spaces": ["R03", "R05"], "type": "partition_or_opening_chain"},
+      {"spaces": ["R03", "R06"], "type": "partition_with_door"},
+      {"spaces": ["R04", "R06"], "type": "partition"},
+      {"spaces": ["R05", "R06"], "type": "partition", "wall_id": "W_R05_R06_PARTITION"}
+    ]
+  },
+  "validation": {
+    "area_checks": [
+      {"space": "R01", "formula": "1.98 * 1.55", "result_m2": 3.069, "printed_m2": 3.1, "status": "consistent"},
+      {"space": "R03", "formula": "2.685 * 1.89", "result_m2": 5.07465, "printed_m2": 5.1, "status": "consistent"},
+      {"space": "R04", "formula": "2.65 * 1.88", "result_m2": 4.982, "printed_m2": 5.0, "status": "consistent"},
+      {"space": "R05", "formula": "5.90 * 3.57", "result_m2": 21.063, "printed_m2": 20.5, "status": "consistent_with_recesses"},
+      {"space": "R06", "formula": "3.69 * 3.56", "result_m2": 13.1364, "printed_m2": 13.3, "status": "approximately_consistent"}
+    ],
+    "known_conflicts": [
+      "R06 working depth 3.56 m versus raw right-wall annotation 3.425 m",
+      "R02 main rectangle 2.17 x 2.02 m does not include all niches needed for printed 5.0 m2",
+      "small wall fragments and several door widths cannot be assigned unambiguously from this photograph"
+    ]
+  }
+}

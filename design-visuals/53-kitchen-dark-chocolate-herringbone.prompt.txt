@@ -1,0 +1,14 @@
+Tool: built-in imagegen.
+Source: 50-kitchen-floor-oak-herringbone.png (user attachment exec-a3471eea-d9af-4da4-8a1a-fe1ca0c5942c.png)
+Final: 53-kitchen-dark-chocolate-herringbone.png
+
+Use case: precise-object-edit.
+Input image: edit target, the supplied kitchen visualization.
+Primary request: Change ONLY the wood FLOOR COLOR to DARK CHOCOLATE BROWN.
+
+Recolor the entire existing oak herringbone parquet floor to a rich deep dark-chocolate brown wood stain. A warm, deep cocoa / bitter chocolate / dark walnut brown, visibly much darker than the original light honey oak, with restrained warm undertones. Preserve the exact existing herringbone pattern, block sizes, floor geometry and joints. Keep natural wood grain, subtle differences among the parquet blocks and the matte oiled finish clearly visible through the dark stain. The color must read dark chocolate brown, not black, orange, red mahogany or cool grey. Sunlit portions should be naturally lighter warm chocolate while shaded portions remain rich deep brown. Continue the recoloring under the table and chairs and right up to every cabinet plinth.
+
+Keep the sunlight patches, window and foliage shadows and furniture shadows in their original locations. Recolor the floor's material, without darkening the whole room or changing the lighting/exposure.
+
+Strict invariants: Preserve EVERYTHING except the floor's intrinsic wood color exactly as in the supplied image: camera viewpoint, original 3:2 composition, architecture, ceiling, walls, backsplash, shelves, dishes, plants, lights, dark olive green cabinets, warm walnut tall cabinets (keep their current orange-warm wood color), black countertop, sink and faucet, appliances, brass hardware, table and chairs (keep their existing wood color). The lower green cabinet sequence stays three hinged doors, one three-drawer stack, then one hinged door beside the corner; sink remains centered above the third hinged door. No new objects, carpets, text, labels or watermarks. Crisp, photorealistic, seamless local edit.
+

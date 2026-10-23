@@ -1,0 +1,34 @@
+{
+  "room_m": [
+    3.69,
+    3.56,
+    3.2
+  ],
+  "coordinates": "x plan-left to right; y plan-top to bottom",
+  "north_opening_x_m": [
+    0,
+    1.0
+  ],
+  "north_solid_wall_x_m": [
+    1.0,
+    3.69
+  ],
+  "opening_height_m": 2.45,
+  "opening_height_status": "illustrative, not measured",
+  "opening_width_status": "approximately 1.00 architectural gap read from source photo; prior 0.89 clear door width retained as uncertain",
+  "correction": "supersedes the unverified x=.93..1.82 doorway in bedroom-style-55-reference.svg",
+  "source": "updated-plan-right-detail.png",
+  "wardrobe": "removed from bedroom; adjoining R03 used as dressing space per user request",
+  "console_m": [
+    1.4,
+    0.38,
+    0.78
+  ],
+  "foot_clearance_m": 1.14,
+  "camera_m": [
+    3.4,
+    1.78,
+    1.6
+  ],
+  "construction_status": "concept geometry; not a demolition or construction instruction"
+}

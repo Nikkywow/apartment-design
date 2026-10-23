@@ -1,0 +1,29 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# macOS and editor files
+.DS_Store
+._*
+.idea/
+.vscode/
+
+# Local credentials and environment settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.codex/
+.agents/
+
+# Unrelated Safari utility and private browser history backups
+/safari_history_cleaner.py
+/safari-history-cleaner.README.md
+/safari-history-backups/

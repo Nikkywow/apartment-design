@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Квартира 52 м² — концепция</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #12110f;
+      --panel: #1c1a17;
+      --line: #39342e;
+      --text: #f1ece3;
+      --muted: #aaa197;
+      --accent: #c99049;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    header, main { width: min(1440px, calc(100% - 40px)); margin: auto; }
+    header { padding: 56px 0 30px; }
+    h1 { margin: 0 0 10px; font-size: clamp(34px, 5vw, 64px); letter-spacing: -.04em; }
+    h2 { margin: 52px 0 18px; font-size: 28px; }
+    p { color: var(--muted); max-width: 900px; }
+    .tag { display: inline-block; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; color: #dbc4a5; }
+    .hero, .card { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
+    .hero img, .card img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .caption { padding: 16px 18px 18px; }
+    .caption strong { display: block; margin-bottom: 5px; }
+    .caption span { color: var(--muted); }
+    .budget { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 54px; }
+    .metric { padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); }
+    .metric b { display: block; color: var(--accent); font-size: 26px; }
+    footer { padding: 32px 0 70px; color: var(--muted); }
+    dialog { width: min(96vw, 1700px); padding: 0; border: 0; border-radius: 18px; background: #050505; }
+    dialog::backdrop { background: rgb(0 0 0 / .86); }
+    dialog img { display: block; width: 100%; height: auto; max-height: 92vh; object-fit: contain; }
+    @media (max-width: 760px) { .grid, .budget { grid-template-columns: 1fr; } header, main { width: min(100% - 24px, 1440px); } }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="tag">52,0 м² · вариант C</span>
+    <h1>Тёплый dark loft</h1>
+    <p>Экспериментальная master-планировка с частичным раскрытием холла, односторонней мини-гардеробной, двумя сохранёнными санузлами и мокрыми зонами на исходных местах.</p>
+  </header>
+  <main>
+    <h2>Планировочные варианты</h2>
+    <figure class="hero">
+      <img src="варианты-планировки.png" alt="Три варианта планировки квартиры">
+    </figure>
+
+    <h2>Кухня-гостиная</h2>
+    <section class="grid">
+      <article class="card"><img src="design-visuals/01-kitchen-living-main.png" alt="Кухня-гостиная, вид к холлу"><div class="caption"><strong>Вид к кухне и холлу</strong><span>Однолинейная кухня, прямой диван, стеклянный экран.</span></div></article>
+      <article class="card"><img src="design-visuals/02-kitchen-living-windows.png" alt="Кухня-гостиная, вид к остеклению"><div class="caption"><strong>Вид к фасаду</strong><span>Два существующих проёма, круглый стол и свободный маршрут.</span></div></article>
+    </section>
+
+    <h2>Входная группа и коридор</h2>
+    <section class="grid">
+      <article class="card"><img src="design-visuals/03-entry-hall.png" alt="Прихожая"><div class="caption"><strong>Прихожая</strong><span>Хранение до потолка и рифлёное стекло для приватности.</span></div></article>
+      <article class="card"><img src="design-visuals/08-corridor-work-niche.png" alt="Коридор с рабочей нишей"><div class="caption"><strong>Рабочая ниша</strong><span>Стол глубиной до 500 мм при сохранённом проходе.</span></div></article>
+    </section>
+
+    <h2>Master-спальня</h2>
+    <section class="grid">
+      <article class="card"><img src="design-visuals/04-master-bedroom.png" alt="Мастер-спальня"><div class="caption"><strong>Спальная зона</strong><span>Кровать 140×200 см и локальная дубовая панель.</span></div></article>
+      <article class="card"><img src="design-visuals/05-mini-wardrobe.png" alt="Мини-гардеробная"><div class="caption"><strong>Мини-гардеробная</strong><span>Шкафы только справа: 550 мм + проход 750 мм.</span></div></article>
+    </section>
+
+    <h2>Санузлы</h2>
+    <section class="grid">
+      <article class="card"><img src="design-visuals/06-main-bathroom.png" alt="Основная ванная"><div class="caption"><strong>Основная ванная, 5,0 м²</strong><span>Ванна на исходном месте, графитовый камень и тёплое дерево.</span></div></article>
+      <article class="card"><img src="design-visuals/07-guest-wc-laundry.png" alt="Гостевой санузел с постирочной"><div class="caption"><strong>WC + постирочная, 3,1 м²</strong><span>Колонна техники, компактная раковина и подвесной унитаз.</span></div></article>
+    </section>
+
+    <h2>Бюджет</h2>
+    <section class="budget">
+      <div class="metric"><b>7,6–10,8 млн ₽</b><span>полный диапазон</span></div>
+      <div class="metric"><b>≈ 9,2 млн ₽</b><span>рабочая плановая точка</span></div>
+      <div class="metric"><b>±20–25%</b><span>точность до обмера и КП</span></div>
+    </section>
+    <footer>Концепция не является рабочим проектом. Демонтаж — только после обследования; точные размеры — после лазерного обмера.</footer>
+  </main>
+  <dialog id="viewer"><img alt="Увеличенное изображение"></dialog>
+  <script>
+    const viewer = document.querySelector('#viewer');
+    const viewerImage = viewer.querySelector('img');
+    document.querySelectorAll('main img').forEach((image) => image.addEventListener('click', () => {
+      viewerImage.src = image.src;
+      viewerImage.alt = image.alt;
+      viewer.showModal();
+    }));
+    viewer.addEventListener('click', () => viewer.close());
+  </script>
+</body>
+</html>

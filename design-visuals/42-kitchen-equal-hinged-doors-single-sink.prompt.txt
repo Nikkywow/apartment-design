@@ -1,0 +1,15 @@
+Tool: built-in imagegen. Two sequential edits.
+Original: 41-kitchen-sink-centered-hinged-cabinets.png
+Final: 42-kitchen-equal-hinged-doors-single-sink.png
+
+Initial edit brief:
+Convert the left portion of the lower dark-green three-drawer bank into a hinged cabinet. Reorganize the straight green base run into five equal-width modules: four full-height single hinged paneled doors followed by a narrow three-drawer stack. Make all four doors equal in physical width and height, preserving perspective, green panels and brass knobs. Center a compact black sink over the third hinged door, with its entire basin contained within that door's edges. Preserve the rest of the original room and rendering.
+
+Final refinement prompt (verbatim):
+Use case: precise-object-edit.
+Edit the supplied kitchen image. Keep the four lower green hinged doors and the narrow drawer bank exactly as shown. Change ONLY the position and size of the black sink, faucet and adjacent soap dispenser.
+
+CRITICAL CORRECTION: The current sink is centered at the seam between door 2 and door 3. Move the COMPLETE sink and faucet assembly to the RIGHT so it is centered above the MIDDLE of door 3, not at the seam. In this 1536 by 1024 image, door 3 spans approximately x=700 to x=840. Its centerline is x=770. The sink basin and its rim should span approximately x=714 to x=826, entirely between those door edges. The faucet base must be at x=770 on the back rim, with the sink center also at x=770. Thus shift the current faucet about 70 pixels to the right, and make the sink narrower, matching a compact single-bowl sink over a single 500mm cabinet. Move the soap dispenser just to the right of the sink while keeping it left of the cooktop.
+Remove and seamlessly repair the old sink cutout location so there is continuous black countertop there. There MUST NOT be any cabinet-door vertical seam directly below the center of the sink. The full sink width must sit over ONLY the third door.
+
+Preserve EVERYTHING else exactly: the four equally sized green hinged doors, knobs, drawer bank, paneled corner cabinet, all upper and tall cabinets, wooden appliance towers, cooktop, shelves, dishes, wall tiles, lights, room geometry, window, table, chairs, floor, perspective, shadows, colors, and photorealistic rendering. No labels, no extra objects.

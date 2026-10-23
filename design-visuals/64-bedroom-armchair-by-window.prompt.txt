@@ -1,0 +1,18 @@
+Tool: built-in imagegen.
+Edit target: 63-bedroom-modern-desk-leather-chair.png (user attachment exec-537e9083-9c65-47f7-b08b-b34acff740df.png).
+Change: chair by window, desk moved to center, dresser stays on right.
+
+Use case: precise-object-edit.
+Edit this EXACT bedroom image to RELOCATE THE EXISTING COGNAC LEATHER ARMCHAIR TO THE WINDOW SIDE. This is a precise furniture rearrangement, not a redesign.
+
+NEW ORDER ACROSS THE FRONT WALL from IMAGE LEFT to RIGHT:
+1. SAME cognac leather armchair, now at the left end BY THE WINDOW and curtain, in the area previously occupied by the writing desk. Keep the same compact scale, rounded leather arms, brass nailhead details, wooden feet and patterned olive lumbar cushion. Its back stays near the front wall; angle the chair only slightly, about 8–10 degrees toward the room center/bed, to create a small welcoming reading corner. Leave a real modest gap to the curtain so the chair does not press on or clip through the fabric. Do not place it far into the foreground or block the bed.
+2. SAME contemporary walnut desk and SAME desk chair, moved horizontally toward the CENTER of the front wall, into the former leather-chair area. Keep its 110 cm approximate width, flat thick walnut top, clean substantial wooden supports, discreet drawers, brass reading lamp and notebook. Desk back remains against the front wall. Desk chair pushed under the desk. Desk must not overlap the leather chair or dresser.
+3. SAME compact walnut chest of drawers at the RIGHT, remaining in its current position with the same ceramic vase and small bowl on top. The full-height opening to the dressing space stays clear.
+
+REMOVE the armchair completely from its old central location; only ONE leather armchair in the final scene. Remove the desk from its old left position; only ONE desk and ONE desk chair. Do not create duplicates.
+
+The front wall is about 3.56 m wide and must NOT be enlarged. Approximate pieces: armchair 75 cm wide x 78 cm deep, desk 110 cm wide x 60 cm deep, chest 80 cm wide x 45 cm deep. Keep small visible gaps between the pieces and a margin near curtains and doorway; this is a compact real bedroom, not a vast room. Use slight chair rotation only, avoiding a huge diagonal footprint. Preserve all real circulation routes and bedroom proportions.
+
+PRESERVE EXACTLY: original camera position, viewing angle and 3:2 composition; bed in the foreground and its olive blanket/ivory bedding; window and curtains on the left; entire gallery of framed pictures at their existing locations; picture lights; cream upper walls and olive lower panels; ceiling cornice and pleated fabric light; dark chocolate herringbone floor and rug; full-height opening at right and the compact dressing space visible beyond. Same warm afternoon sunlight and natural soft shadows. Do not add side tables, ottomans, floor lamps, plants, new pictures or other accessories. No architecture changes.
+Clean photorealistic image, detailed authentic walnut and supple leather, no smeared textures, noise, text or watermark.

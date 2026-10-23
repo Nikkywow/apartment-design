@@ -1,0 +1,43 @@
+Tool: built-in imagegen. Three independent edits from the same source.
+Source: 46-kitchen-warm-limestone-tile-proposal.png
+
+1. Терракота
+Final: 47-kitchen-floor-muted-terracotta.png
+
+Use case: precise-object-edit.
+Edit target: the supplied kitchen image. This is one of three strictly comparable floor-color studies.
+Change ONLY the COLOR of the existing floor tiles. Keep the exact same rectangular stone tile sizes, staggered layout, grout lines, matte limestone-like finish and fine restrained mineral texture. Recolor the entire visible floor continuously, including underneath the table and chairs, and match grout to the new tile color. Keep the identical room lighting, exposure, window sunlight patches, furniture and foliage shadows. Change the floor material's intrinsic color, not the global image white balance.
+
+FLOOR COLOR FOR THIS VERSION:
+Soft muted TERRACOTTA / dusty baked clay. A medium-light warm earthy reddish-brown with a gentle dusty peach-clay undertone, distinct from the original cream floor and from the orange walnut wood. Elegant desaturated terracotta, natural and softly aged, with subtle clay-stone variations. Do not make it vivid orange or saturated red.
+
+Strict invariants: preserve EVERYTHING above the floor exactly: camera viewpoint, original 3:2 framing, kitchen layout, proportions, green fronts, warm walnut wood color and grain, black worktops, sink, faucet, appliances, backsplash, lights, shelves, table, chairs and all objects. The straight green base run stays as three hinged doors, a three-drawer stack, then a hinged door beside the corner. Sink remains centered over the third hinged door. Preserve clear photorealistic detail. No labels, text, watermarks, new objects, carpets or decor. The floor should be visibly and convincingly the requested color, with natural variations in sunlight and shade.
+
+====================
+
+2. Тёплый серо-бежевый
+Final: 48-kitchen-floor-warm-greige.png
+
+Use case: precise-object-edit.
+Edit target: the supplied kitchen image. This is one of three strictly comparable floor-color studies.
+Change ONLY the COLOR of the existing floor tiles. Keep the exact same rectangular stone tile sizes, staggered layout, grout lines, matte limestone-like finish and fine restrained mineral texture. Recolor the entire visible floor continuously, including underneath the table and chairs, and match grout to the new tile color. Keep the identical room lighting, exposure, window sunlight patches, furniture and foliage shadows. Change the floor material's intrinsic color, not the global image white balance.
+
+FLOOR COLOR FOR THIS VERSION:
+Warm GREIGE / soft mushroom stone. A medium-light clearly grey-beige with subtle taupe undertones, quieter and more neutral than the existing yellowish cream limestone. A soft warm grey balanced with beige, with a natural limestone character and restrained mineral variation. It should be visibly greige in the shaded areas and gently warm in the sunlight. Do not make it cream, yellow, blue-grey, charcoal or dark brown.
+
+Strict invariants: preserve EVERYTHING above the floor exactly: camera viewpoint, original 3:2 framing, kitchen layout, proportions, green fronts, warm walnut wood color and grain, black worktops, sink, faucet, appliances, backsplash, lights, shelves, table, chairs and all objects. The straight green base run stays as three hinged doors, a three-drawer stack, then a hinged door beside the corner. Sink remains centered over the third hinged door. Preserve clear photorealistic detail. No labels, text, watermarks, new objects, carpets or decor. The floor should be visibly and convincingly the requested color, with natural variations in sunlight and shade.
+
+====================
+
+3. Приглушённый оливковый
+Final: 49-kitchen-floor-muted-olive.png
+
+Use case: precise-object-edit.
+Edit target: the supplied kitchen image. This is one of three strictly comparable floor-color studies.
+Change ONLY the COLOR of the existing floor tiles. Keep the exact same rectangular stone tile sizes, staggered layout, grout lines, matte limestone-like finish and fine restrained mineral texture. Recolor the entire visible floor continuously, including underneath the table and chairs, and match grout to the new tile color. Keep the identical room lighting, exposure, window sunlight patches, furniture and foliage shadows. Change the floor material's intrinsic color, not the global image white balance.
+
+FLOOR COLOR FOR THIS VERSION:
+Light muted OLIVE / dusty sage-green stone. A medium-light earthy grey-green with a gentle warm olive undertone, visibly green but soft and desaturated. Noticeably lighter than the dark olive kitchen fronts, creating a natural tonal relationship with them. Subtle green limestone-like mineral variations. Do not make it dark forest green, emerald, mint, teal, vivid yellow-green, plain beige or grey.
+
+Strict invariants: preserve EVERYTHING above the floor exactly: camera viewpoint, original 3:2 framing, kitchen layout, proportions, green fronts, warm walnut wood color and grain, black worktops, sink, faucet, appliances, backsplash, lights, shelves, table, chairs and all objects. The straight green base run stays as three hinged doors, a three-drawer stack, then a hinged door beside the corner. Sink remains centered over the third hinged door. Preserve clear photorealistic detail. No labels, text, watermarks, new objects, carpets or decor. The floor should be visibly and convincingly the requested color, with natural variations in sunlight and shade.
+

@@ -1,0 +1,38 @@
+id,value_m,applies_to,confidence,status
+M001,5.90,R05 overall plan-bottom width,high,working
+M002,3.57,R05 plan-left depth / kitchen wall,high,working
+M003,3.69,R06 internal width,high,working
+M004,3.56,R06 working depth and R05/R06 partition,medium,working
+M005,3.425,R06 raw plan-right vertical annotation,low,conflict
+M006,2.685,R03 top wall / width,high,working
+M007,1.89,R03 working depth,medium,working
+M008,2.65,R04 working width,medium,working
+M009,1.88,R04 depth,high,working
+M010,1.98,R01 working width,medium,working
+M011,1.55,R01 depth,high,working
+M012,2.17,R02 main width,medium,working
+M013,2.02,R02 main depth,medium,working
+M014,1.335,R02/R01 entry-side vertical wall fragment,low,raw
+M015,1.415,R02-to-R05 lower horizontal segment/opening chain,low,raw
+M016,1.78,R03 left vertical wall fragment,low,raw
+M017,1.87,R06 top clear wall segment / R04 lower segment,medium,working_with_context
+M018,1.00,R04/R06 top-left horizontal segment,medium,working_with_context
+M019,0.89,R03-R04 and/or R03-R06 door clear width,medium,working_with_context
+M020,0.80,small internal door/opening and R04 right-side fragment,low,raw
+M021,0.75,short internal wall segment near corridor/bath doors,low,raw
+M022,0.69,internal opening/wall segment near R03 bottom edge,low,raw
+M023,0.67,short partition segment near R03/R04 top-left,low,raw
+M024,0.65,short partition segment near R03/R04 top-left,low,raw
+M025,0.63,short wall segment at R02/R03 junction,low,raw
+M026,0.44,short wall segment near corridor/bedroom junction,low,raw
+M027,0.23,short internal wall/pier near R01/R02,low,raw
+M028,0.14,small facade/finish offset,low,raw
+M029,0.125,typical internal partition thickness annotations,medium,working_with_context
+M030,1.06,main entrance door opening,medium,working_with_context
+M031,1.49,R05 narrow facade opening,medium,working_with_context
+M032,2.19,R05 wide facade opening,medium,working_with_context
+M033,2.25,R06 facade opening,high,working
+M034,0.71,R06 facade plan-left pier,low,raw
+M035,0.73,R06 facade plan-right pier,low,raw
+M036,1.90,plan-top-left external horizontal fragment,low,raw
+M037,1.72,R05 top-left wall behind kitchen / short leg of L-shaped kitchen,medium,working_with_context

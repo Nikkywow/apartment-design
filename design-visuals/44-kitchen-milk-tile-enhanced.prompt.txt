@@ -1,0 +1,14 @@
+Tool: built-in imagegen.
+Source: 43-kitchen-drawers-swapped-left.png
+Final: 44-kitchen-milk-tile-enhanced.png
+
+Use case: precise-object-edit.
+Edit target: the supplied kitchen render.
+Primary request: Improve the image quality and replace the existing wooden floor with MILK-COLORED ceramic/porcelain floor tiles.
+
+Floor: replace the entire visible wooden floor with elegant warm milky off-white / light ivory matte porcelain tiles, approximately 60x60 cm square tiles in a straight aligned grid. Clearly recognizable pale milk-colored tile, with restrained fine natural texture and thin matching light-cream grout lines. Correct realistic perspective and scale. Extend the tiled floor continuously underneath the table and chairs and up to the kitchen plinths and wooden cabinet bases. Preserve the natural window sunlight and the existing shadows of furniture and foliage, adapting them realistically to the light tile. Keep the floor pale milky ivory despite the warm sunlight. Do not introduce wood-grain texture, checkerboards, decorative patterns, or strong marble veins.
+
+Image quality: render a refined high-resolution photorealistic version with visibly clearer fine details, crisp clean cabinet edges, beautifully resolved natural walnut grain, subtle ceramic and metal textures, clean brass handles, and clear realistic lighting. Remove the soft smeared, mottled, painterly and compressed appearance of the reference while retaining realistic material detail. Keep balanced highlights and natural shadow detail. Produce the highest native resolution available, preferably 3072x2048 or greater while preserving the exact original 3:2 framing.
+
+Strict invariants: preserve the EXACT same kitchen design, architecture, composition, camera viewpoint, framing, proportions, furniture positions, window, table, chairs, shelves, crockery, warm walnut tall cabinets, dark olive-green cabinets, paneled door designs and warm light atmosphere. The straight lower dark-green cabinet sequence MUST remain, from left to right: THREE full-height hinged doors, a single stack of THREE drawers with brass cup pulls, then ONE full-height hinged door before the corner. The black sink and faucet must remain centered over the third hinged door in their current positions. Keep the countertop, cooktop, ovens, upper glass cabinets, backsplash and all objects unchanged. Only change the floor material and improve visual fidelity. No new objects, no text, no watermarks.
+

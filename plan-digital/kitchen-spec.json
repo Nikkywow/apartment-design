@@ -1,0 +1,100 @@
+{
+  "version": "2.1",
+  "status": "recommended_working_option_corrected_L_shape",
+  "supersedes": "version 1.0 straight-run option, rejected as inconsistent with plan",
+  "space_id": "R05",
+  "layout_type": "L_shaped",
+  "ceiling_height_mm": 3200,
+  "legs": {
+    "A_long_plan_left_wall": {
+      "wall_id": "W_R05_LEFT_KITCHEN",
+      "length_mm": 3570,
+      "direction": "from facade/window end toward internal corner",
+      "modules": [
+        {"id": "A00", "type": "filler", "width_mm": 60},
+        {"id": "A01", "type": "integrated_fridge_freezer_70_30_tall_unit", "width_mm": 600, "program": "separate upper refrigerator door and lower freezer door"},
+        {"id": "A02", "type": "base_drawers_landing", "width_mm": 450},
+        {"id": "A03", "type": "sink_base", "width_mm": 600},
+        {"id": "A04", "type": "integrated_dishwasher", "width_mm": 600},
+        {"id": "A05", "type": "induction_hob_drawers_and_concealed_hood", "width_mm": 600},
+        {"id": "A06", "type": "blind_corner_base_and_upper", "width_mm": 600},
+        {"id": "A07", "type": "corner_service_filler", "width_mm": 60}
+      ]
+    },
+    "B_short_plan_top_wall": {
+      "wall_id": "W_R05_TOP_KITCHEN_RETURN",
+      "length_mm": 1720,
+      "direction": "from internal corner toward hall opening",
+      "modules": [
+        {"id": "B01", "type": "corner_overlap_zone", "width_mm": 600},
+        {"id": "B02", "type": "oven_and_microwave_tall_unit", "width_mm": 600, "program": "lower drawers, oven at ergonomic height, built-in microwave above oven, upper storage"},
+        {"id": "B03", "type": "breakfast_pantry_and_hidden_coffee_garage", "width_mm": 450, "program": "lower internal pull-outs for food, ventilated pocket-door coffee niche at work height, cups and breakfast storage above"},
+        {"id": "B04", "type": "end_filler", "width_mm": 70}
+      ]
+    }
+  },
+  "vertical_dimensions_mm": {
+    "worktop_height": 900,
+    "backsplash_height": 550,
+    "upper_cabinet_bottom": 1450,
+    "tall_unit_height": 2750
+  },
+  "depths_mm": {
+    "base_carcass": 600,
+    "tall_carcass": 600,
+    "countertop": 620,
+    "countertop_front_overhang": 20,
+    "upper_cabinet": 350
+  },
+  "electrical_points": [
+    {"id": "E01A", "equipment": "integrated refrigerator", "location": "A01 accessible adjacent service point, not behind appliance"},
+    {"id": "E01B", "equipment": "integrated freezer", "location": "A01 accessible adjacent service point, coordinated with refrigerator circuit and appliance passport"},
+    {"id": "E02", "type": "triple_230v", "location": "backsplash above A02 landing zone"},
+    {"id": "E03", "equipment": "dishwasher", "location": "accessible sink cabinet A03"},
+    {"id": "E04", "type": "triple_230v", "location": "backsplash above A04 preparation surface"},
+    {"id": "E05", "equipment": "induction hob", "location": "service zone below/adjacent according to appliance passport"},
+    {"id": "E06", "equipment": "hood", "location": "inside upper cabinet above A05"},
+    {"id": "E07A", "equipment": "oven", "location": "B02 tall-unit service zone"},
+    {"id": "E07B", "equipment": "built-in microwave", "location": "B02 separate accessible service point above oven"},
+    {"id": "E07C", "equipment": "coffee machine", "location": "B03 ventilated pocket-door appliance garage at work height"},
+    {"id": "E08", "equipment": "task-light driver", "location": "accessible upper cabinet on leg A"}
+  ],
+  "materials": {
+    "fronts": "dark chocolate walnut; shallow contemporary-Victorian framed panels with a calm vertical rhythm; selective fine fluting on the refrigerator and pantry fronts; minimal aligned horizontal seams",
+    "backsplash": "muted olive handmade-look vertical tile",
+    "worktop": "honed graphite stone or compact surface",
+    "hardware": "aged brass or dark bronze",
+    "floor": "smoked-oak chocolate herringbone",
+    "walls": "warm greige mineral finish",
+    "ceiling": "warm white with simple cornice and restrained Victorian moulding"
+  },
+  "task_lighting": {
+    "type": "concealed continuous under-cabinet functional light",
+    "color_temperature_k": "2700-3000",
+    "decorative_led_lines": false
+  },
+  "invalidated_deliverables": [
+    "../design-visuals/18-kitchen-L-technical-package.png",
+    "../design-visuals/16-kitchen-technical-elevation.png",
+    "../design-visuals/17-kitchen-photoreal-render.png",
+    "../design-visuals/19-kitchen-L-photoreal-render.png",
+    "../design-visuals/20-kitchen-L-relief-fronts.png",
+    "../design-visuals/21-kitchen-L-verified-depth.png"
+  ],
+  "current_deliverables": {
+    "technical_plan_and_elevations": null,
+    "photoreal_render": "../design-visuals/25-kitchen-measured-plan-render.png",
+    "geometry_reference": "../design-visuals/22-kitchen-geometry-reference.png",
+    "interactive_3d": "/Users/nikita/.codex/visualizations/2026/10/11/01a12c38-17fb-7742-a097-9bef2d65dcbb/kitchen-3d.html",
+    "render_qa": "kitchen-render-qa-v3.md"
+  },
+  "pending_before_construction": [
+    "confirm 1720 mm return wall with laser measurement",
+    "exact appliance models and passports",
+    "clean finished wall lengths for both legs",
+    "water, sewer and ventilation coordinates",
+    "electrical capacity and circuit protection",
+    "integrated fridge opening clearance near curtain/window",
+    "corner cabinet mechanism and manufacturer tolerances"
+  ]
+}

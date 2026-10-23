@@ -1,0 +1,15 @@
+Tool: built-in imagegen.
+Edit target: 57-bedroom-wardrobe-reverse.png.
+Cozy styling reference: 59-bedroom-cozier.png.
+Scope: visual integration of the wardrobe at its existing position; not a new furniture layout.
+
+Use case: precise-object-edit.
+Input 1 is the exact edit target: reverse view of the bedroom facing the large walnut wardrobe.
+Input 2 is the approved warmer cozy direction for this SAME bedroom; use only for textile softness and the small pleated fabric ceiling lamp.
+User dislikes the massive wardrobe directly opposite the bed. Produce a precise architectural redesign of THIS WARDROBE so it visually recedes into the room as quiet integrated storage.
+
+Replace the dark walnut freestanding-looking cabinet with a bespoke built-in wardrobe in EXACTLY the same warm creamy ivory as the upper walls. Retain its existing position, overall useful width, physical depth and four closed functional door leaves. Make all four door faces COMPLETELY FLAT, smooth matte painted, with very fine vertical seams, discreet concealed finger pulls and no visible applied handles. No wood grain, no framed door panels, no bulky posts, no decorative cabinet cornice, no heavy projecting base. Integrate it to the ceiling with a minimal painted infill; let the ROOM's existing restrained ceiling cornice continue neatly above the built-in instead of a separate wardrobe crown. Slim recessed toe kick. Warm ivory side fillers also match the walls. It should read as a peaceful bright architectural surface, very clearly lighter and less oppressive than the original large wooden furniture. Preserve real storage depth, do not imply it is recessed into an existing structural wall. Do not expand the room or move any walls.
+
+Keep the olive lower wainscot on the adjacent exposed walls, the cream entry door and its exact location, brass door handle, curtains and window, herringbone dark chocolate floor, camera, crop, bed size and position. Keep the same clear floor aisle in front of the wardrobe. Keep the empty paneled wall section to the left of the wardrobe; do not add furniture or art there. No TV, mirror, open shelf, clutter or plants in new places.
+Synchronize the cozy details with input 2: the small ceiling light becomes the same pleated ivory fabric semi-flush shade with restrained brass fittings; the visible rug becomes soft oatmeal wool; the foreground bed has the same plush ivory linen bedding and generous moss-olive knitted blanket. Preserve perspective, with the headboard behind camera.
+Natural soft warm afternoon light entering from image-left, gentle ambient light, bright readable creamy cabinetry, no intense orange cast. Preserve photorealism, crisp straight architectural edges and fine fabric texture. Same single horizontal 3:2 image, no before-after collage, no text or watermark.

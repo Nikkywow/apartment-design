@@ -1,0 +1,23 @@
+Tool: built-in imagegen.
+Primary room reference: 64-bedroom-armchair-by-window.png.
+Bed identity and camera reference: 59-bedroom-cozier.png.
+User explicitly returned to variant 64; lighter-floor variant 65 is not used.
+
+Use case: photorealistic-natural / consistent reverse-angle interior visualization.
+Create the VIEW TOWARD THE BED of the user's selected BEDROOM VARIANT 64.
+INPUT 1: variant 64, the current definitive room design, materials, atmosphere and furniture layout, viewed FROM the bed toward the desk. It has DARK CHOCOLATE BROWN HERRINGBONE flooring. The later pale-oak-floor variant is explicitly rejected; DO NOT lighten the floor.
+INPUT 2: earlier view of this SAME room's BED AND HEADBOARD. Use it as the identity reference for the exact bed, bedding, nightstands and bedside lights and as the starting composition for the requested new viewpoint. Update only what is necessary to match variant 64.
+
+REQUESTED CAMERA / ROOM ORIENTATION:
+Turn the camera around from input 1 and look toward the bed from near the dressing-entry side, an oblique view similar to input 2. The olive upholstered HEADBOARD is on the background EAST/plan-right solid wall. The only WINDOW with ivory sheers and oatmeal curtains is on IMAGE-RIGHT, the SOUTH wall. The two walnut bedside tables flank the headboard. Do not mirror the room. Room approximately 3.69 x 3.56 m, ceiling 3.20 m; keep intimate believable proportions, no inflated luxury suite. The main bed and both bedside areas are the focus, showing its foot and some surrounding dark parquet.
+The variant-64 desk, dresser and reading chair are on the WEST wall OPPOSITE the headboard, behind this camera; do not relocate them onto the bed wall, do not force them into this frame. The compact dressing-space opening is near the northwest corner behind/left of this camera and can remain outside the frame. Do not invent a new door, wardrobe, mirror, balcony or window. A normal clean single bedroom photograph, no collage.
+
+MATCH THE BED IDENTICALLY TO INPUT 2:
+Same generously padded olive fabric bed and softly rounded rectangular headboard, same approximate 180 x 200 cm mattress, same soft ivory linen duvet, layered pillows with olive and muted caramel accent and a small botanical-print pillow, thick moss-olive knitted blanket relaxed across the lower bed. Same soft oatmeal wool rug under the bed. Same warm walnut one-drawer nightstands with small brass knobs. Same TWO aged brass wall lights with small pleated ivory fabric shades, mounted above the nightstands. Same small pleated ivory/brass semi-flush ceiling fixture seen in BOTH references. Keep their scale and warm light.
+
+MATCH VARIANT 64'S FINISHES:
+Deep olive LOWER wainscoting; smooth cream UPPER walls without the large EMPTY RECTANGULAR WALL-MOLDING FRAMES seen in input 2. Those upper empty molding frames have been removed in the current design. Preserve the simple ceiling cornice and the lower olive panels.
+Above the bed retain the quiet framed LANDSCAPE PAINTING from input 2; it fits the vintage print collection visible on the opposite wall in variant 64. It should be a medium-size actual framed artwork, not a giant wall panel. Keep the bed wall restful, do not duplicate every picture from the desk wall or paste the desk-wall art arrangement here.
+Floor MUST match variant 64: rich DARK CHOCOLATE walnut-brown herringbone, matte, natural fine wood detail, not pale honey oak. Nightstands remain their warm walnut tone. Cognac leather reading chair stays behind camera in its selected position by the opposite-wall end near the window.
+Same warm late-afternoon sun from image-right, fine leaf shadows and gentle diffuse lamplight, consistent with input 1, balanced ivory surfaces without an excessive orange cast. Cozy and tactile yet crisp professional architectural photography. Real straight verticals and natural lens perspective. Preserve the room identity and all approved colors. Highest clean native detail, no digital grain, smeared wood, oversharpened texture or painterly artifacts.
+Single horizontal 3:2 photorealistic image. No text, labels, watermark or logo.

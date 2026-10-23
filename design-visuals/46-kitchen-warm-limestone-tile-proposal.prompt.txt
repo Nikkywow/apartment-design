@@ -1,0 +1,13 @@
+Tool: built-in imagegen.
+Source: 45-kitchen-warm-cream-tile.png
+Final: 46-kitchen-warm-limestone-tile-proposal.png
+
+Use case: precise-object-edit.
+Edit target: the supplied kitchen visualization.
+Primary request: Show a designer's alternative FLOOR TILE treatment that suits this traditional dark olive-green and warm walnut kitchen. Change only the floor.
+
+Design proposal: warm natural limestone-look matte porcelain in LARGE RECTANGULAR slabs approximately 60 x 90 cm, laid in a calm staggered one-third bond. A restrained English country-house stone floor, with warm sandy cream / pale oatmeal / natural light biscuit-beige coloring. The slabs should be visibly rectangular, with their long edges broadly parallel to the long back kitchen cabinet run, correctly projected in the existing camera perspective. Use subtle, believable natural limestone details: gentle cloudy mineral variations, delicate tiny pores, a little warm fossil-like texture, very slight variation between individual slabs, softly eased edges. Honed matte surface, not polished or shiny. Thin warm beige grout matching the stone. The result must read as refined natural warm stone, with more material character than the previous nearly uniform ivory tiles, while remaining light and quiet. No bold veins, no orange or yellow cast, no grey concrete look, no decorative borders or checkerboards.
+Replace all visible floor, continuing under the chairs and table, up to the existing cabinet bases. Maintain exactly the same floor level, geometry, sunlight patches and soft foliage/furniture shadows. Let the warm stone harmonize with the walnut and brass and complement the deep green fronts. Keep natural, well-balanced color; do not apply a warming filter to the whole scene.
+
+Strict invariants: preserve the original camera angle and 3:2 framing, kitchen arrangement, all cabinet fronts, window, table, chairs, plants, walls, ceiling, backsplash, shelves, crockery, lights, lighting atmosphere, black worktop, appliances, faucet and sink placement. The lower green cabinet order remains THREE single hinged doors, ONE three-drawer stack, then ONE single hinged door beside the corner. Sink remains centered on the third hinged door. Keep the sharp photorealistic quality, clear natural wood grain and precise material details. No extra objects, labels or watermark.
+

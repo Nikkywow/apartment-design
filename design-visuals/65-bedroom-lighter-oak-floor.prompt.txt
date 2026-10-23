@@ -1,0 +1,11 @@
+Tool: built-in imagegen.
+Edit target: 64-bedroom-armchair-by-window.png (user attachment exec-af906094-3c40-4f57-9c1f-321fa84ccd64.png).
+
+Use case: precise-object-edit.
+Edit ONLY THE WOOD FLOOR COLOR in the supplied bedroom photograph.
+User request: make the floor lighter.
+Change all visible dark chocolate/reddish brown herringbone parquet to a noticeably LIGHTER NATURAL WARM OAK: a refined medium-light honey-beige / natural golden oak tone, warm but restrained, not orange, not reddish, not grey and not whitewashed. Aim for a clear two-to-three-shade lightening of the wood itself, not an exposure increase. Natural subtle oak grain with a matte/satin finish. Preserve the exact existing HERRINGBONE board layout, board sizes, joint locations, perspective and believable fine wood detail. Apply the same new oak finish consistently to the entire exposed bedroom floor and the continuous visible floor through the right-hand opening into the dressing space. Preserve the exact sunlight patches, leaf shadows, contact shadows under furniture and directional reflections, adapted naturally to the lighter wood.
+
+STRICTLY PRESERVE EVERYTHING ELSE: identical camera, crop and composition; all furniture positions and sizes; cognac leather armchair at window, walnut writing desk in center, desk chair, walnut chest on right, walnut wardrobe inside dressing area; all their existing darker wood colors; cream walls, green wainscoting, art prints and frames, brass lights, pleated ceiling lamp, curtains, bedding, olive throw and rug. Do NOT lighten or recolor the furniture, wall panels or bed. Do not change general exposure or lighting, add any object, alter architecture or modify the full-height passage. Only the FLOOR material's color and subtle wood appearance changes.
+
+Clean professional photorealistic edit, smooth natural grain, no speckling or painterly artifacts, no oversharpening. Same horizontal 3:2 image. No text, labels or watermark.
